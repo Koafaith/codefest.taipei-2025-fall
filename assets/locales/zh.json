@@ -410,22 +410,6 @@
                             "content": "本專案聚焦商圈活化，整合雙北多源資料，呈現六大組件：景點、無障礙場域、路邊停車格、竊盜熱點、旅館與公廁分布。可快速比對長輩友善度、夜市住宿治安與停車便利性，來規劃行程，同時檢視各地區的觀光潛力。亦開發推薦景點功能，結合各項指標，依使用者需求篩選出適合之場所並排名。"
                         },
                         {
-                            "title": "作品主題摘錄簡述",
-                            "content": "商圈活化\n重點在促進商圈發展、提升觀光體驗與生活便利性。"
-                        },
-                        {
-                            "title": "作品主題精簡",
-                            "content": "商圈觀光潛力與推薦系統"
-                        },
-                        {
-                            "title": "作品內容摘錄簡述",
-                            "content": "整合無障礙場域、治安、住宿、景點與停車等六大面向，並導入推薦引擎，協助旅客規劃個人化友善行程、提升觀光決策效率。"
-                        },
-                        {
-                            "title": "是否包含生成式AI/AI 模型應用",
-                            "content": "否"
-                        },
-                        {
                             "title": "GitHub網址連結",
                             "content": "<a href='https://github.com/shangjung1012/Taipei-City-Dashboard.git' target='_blank' rel='noopener noreferrer' style='text-decoration: underline; color: #0d6efd;'>https://github.com/shangjung1012/Taipei-City-Dashboard.git</a>"
                         },
@@ -454,22 +438,6 @@
                             "content": "建立四大組件: 1. 現正捐血地點統計資料, 2. 穆斯林友善空間, 3. 銀髮俱樂部, 4. 公共廁所地點統計資料，以上皆有用到地圖圖層。加分題為新增熱門儀表板，和搜索組件功能，以提升使用者體驗。"
                         },
                         {
-                            "title": "作品主題摘錄簡述",
-                            "content": "健康守護\n強化區域健康監測與公共衛生行動，回應高齡與多元族群需求。"
-                        },
-                        {
-                            "title": "作品主題精簡",
-                            "content": "健康友善空間導航工具"
-                        },
-                        {
-                            "title": "作品內容摘錄簡述",
-                            "content": "建構捐血點、穆斯林友善空間、銀髮俱樂部與公廁地圖資訊，並新增熱門排行與搜尋組件，提升民眾查詢效率與日常使用體驗。"
-                        },
-                        {
-                            "title": "是否包含生成式AI/AI 模型應用",
-                            "content": "否"
-                        },
-                        {
                             "title": "GitHub網址連結",
                             "content": "<a href='https://github.com/BCPH357/Taipei-City-Dashboard' target='_blank' rel='noopener noreferrer' style='text-decoration: underline; color: #0d6efd;'>https://github.com/BCPH357/Taipei-City-Dashboard</a>"
                         },
@@ -496,22 +464,6 @@
                         {
                             "title": "提案方向與內容",
                             "content": "本資料集涵蓋雙北地區防災相關資訊，包含防空避難設施容量、狹小巷弄分布及淹水風險模擬。可用於分析各行政區避難資源充足度、救災通行難易度與極端降雨下的潛在淹水熱區，協助防災規劃與資源配置。"
-                        },
-                        {
-                            "title": "作品主題摘錄簡述",
-                            "content": "防災應變\n聚焦災前預警、資源盤點與風險提示，提升城市韌性。"
-                        },
-                        {
-                            "title": "作品主題精簡",
-                            "content": "災害熱區與避難資源分析"
-                        },
-                        {
-                            "title": "作品內容摘錄簡述",
-                            "content": "以防空避難設施、狹小巷弄與淹水風險模擬為核心，建立災害熱區視覺模型，協助行政區層級的資源盤點與災害預警規劃。"
-                        },
-                        {
-                            "title": "是否包含生成式AI/AI 模型應用",
-                            "content": "否"
                         },
                         {
                             "title": "GitHub網址連結",
@@ -543,22 +495,6 @@
                             "content": "本「友善商圈」頁面整合雙北地區商圈的友善店家分布、旅服資源、人流趨勢與公共設施設置，透過多元指標與分區視覺化，協助使用者掌握商圈友善程度與潛力，作為政策推動與商圈活化之決策參考。"
                         },
                         {
-                            "title": "作品主題摘錄簡述",
-                            "content": "商圈活化\n重點在促進商圈發展、提升觀光體驗與生活便利性。"
-                        },
-                        {
-                            "title": "作品主題精簡",
-                            "content": "商圈友善程度與潛力評比"
-                        },
-                        {
-                            "title": "作品內容摘錄簡述",
-                            "content": "聚焦友善店家、人流趨勢與公共設施分布，建構商圈友善程度評比，作為政策參考與區域潛力分析的決策工具。"
-                        },
-                        {
-                            "title": "是否包含生成式AI/AI 模型應用",
-                            "content": "否"
-                        },
-                        {
                             "title": "GitHub網址連結",
                             "content": "<a href='https://github.com/kungfangyu/Taipei-City-Dashboard' target='_blank' rel='noopener noreferrer' style='text-decoration: underline; color: #0d6efd;'>https://github.com/kungfangyu/Taipei-City-Dashboard</a>"
                         },
@@ -588,22 +524,6 @@
                             "content": "提案方向：建置雙北地區健康決策支援平台。內容說明：整合死亡率、十大癌症發生率、運動場館使用、疫苗接種與長照據點等多元健康數據，透過視覺化儀表板呈現區域健康狀況與資源分布，提供政府單位精準政策制定依據，並協助民眾了解自身健康風險與可用資源，促進公共衛生管理與社區健康提升。"
                         },
                         {
-                            "title": "作品主題摘錄簡述",
-                            "content": "健康守護\n強化區域健康監測與公共衛生行動，回應高齡與多元族群需求。"
-                        },
-                        {
-                            "title": "作品主題精簡",
-                            "content": "雙北健康決策支援平台"
-                        },
-                        {
-                            "title": "作品內容摘錄簡述",
-                            "content": "整合十大癌症、運動場館、疫苗接種、長照點位等數據，提供政府掌握區域健康狀況、資源配置與政策制定的視覺化依據。"
-                        },
-                        {
-                            "title": "是否包含生成式AI/AI 模型應用",
-                            "content": "是"
-                        },
-                        {
                             "title": "GitHub網址連結",
                             "content": "<a href='https://github.com/RoyLee1224/Taipei-City-Dashboard/tree/develop' target='_blank' rel='noopener noreferrer' style='text-decoration: underline; color: #0d6efd;'>https://github.com/RoyLee1224/Taipei-City-Dashboard/tree/develop</a>"
                         },
@@ -631,22 +551,6 @@
                         {
                             "title": "提案方向與內容",
                             "content": "我們的商圈共榮儀表板，統整了雙北81個商圈的資訊，共做了8個圖表組件和6個地圖組件，主要提供以下三種TA做使用：\n* 想出遊的民眾：統整各大商圈範圍、友善店家、旅館清冊、觀光景點等圖資，供想出遊的民眾參考。\n* 想開店的業者、商圈管委會：設計 商圈資訊公告版位 協助商圈活動曝光，並建立商圈觀測戰情室：透過店鋪租金成本分析、各捷運站乘客流動量、觀光遊憩景點人數，以及各行業別登記資本額與家數的逐年趨勢，協助想要開店的業者與商圈管委會，更了解市場動向。"
-                        },
-                        {
-                            "title": "作品主題摘錄簡述",
-                            "content": "商圈活化\n重點在促進商圈發展、提升觀光體驗與生活便利性。"
-                        },
-                        {
-                            "title": "作品主題精簡",
-                            "content": "商圈資料統整與經營決策"
-                        },
-                        {
-                            "title": "作品內容摘錄簡述",
-                            "content": "整合雙北81個商圈資訊，打造專供民眾出遊、業者開店、管委會經營的多元儀表板，從觀光熱點、友善店家到捷運流量與租金趨勢，協助商圈決策與活化治理。"
-                        },
-                        {
-                            "title": "是否包含生成式AI/AI 模型應用",
-                            "content": "否"
                         },
                         {
                             "title": "GitHub網址連結",
