@@ -1077,7 +1077,7 @@ const showPopup = (activeNews?: News) => {
     @apply left-16 top-14;
   }
   &--2 {
-    @apply left-6 top-[36%];
+    @apply left-6 top-[33%];
   }
   &--3 {
     @apply right-16 top-20;
