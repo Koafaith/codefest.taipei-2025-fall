@@ -18,10 +18,24 @@ const props = defineProps<{
 const emit = defineEmits(['close']);
 
 const thumbsSwiper = ref<Swiper | null>(null);
+const swiperReady = ref(false);
 
 const setThumbsSwiper = (swiper: Swiper) => {
-  thumbsSwiper.value = swiper;
+  try {
+    thumbsSwiper.value = swiper;
+    swiperReady.value = true;
+  } catch (error) {
+    console.error('Error initializing thumbs swiper:', error);
+  }
 };
+
+// Reset swiper state when dialog closes
+watch(() => props.isOpen, (newValue) => {
+  if (!newValue) {
+    thumbsSwiper.value = null;
+    swiperReady.value = false;
+  }
+});
 </script>
 
 <template>
@@ -56,7 +70,7 @@ const setThumbsSwiper = (swiper: Swiper) => {
               </div>
 
               <!-- 多圖模式 -->
-              <div v-else class="lg:mb-0 mb-6">
+              <div v-else-if="props.activeWinningTeam?.image_list?.length" class="lg:mb-0 mb-6">
                 <div class="relative">
                   <Swiper
                     :space-between="10"
@@ -64,7 +78,7 @@ const setThumbsSwiper = (swiper: Swiper) => {
                       prevEl: '.team-swiper-button-prev',
                       nextEl: '.team-swiper-button-next',
                     }"
-                    :thumbs="{ swiper: thumbsSwiper }"
+                    :thumbs="swiperReady ? { swiper: thumbsSwiper } : undefined"
                     :modules="[FreeMode, Navigation, Thumbs]"
                     class="mb-4"
                   >
@@ -97,6 +111,7 @@ const setThumbsSwiper = (swiper: Swiper) => {
                   </button>
                 </div>
                 <Swiper
+                  v-if="props.activeWinningTeam?.image_list?.length > 1"
                   :space-between="10"
                   :slides-per-view="'auto'"
                   :free-mode="true"
