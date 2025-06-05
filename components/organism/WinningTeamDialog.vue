@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Dialog, DialogPanel, DialogTitle, DialogDescription } from '@headlessui/vue';
 import type { PastWinningTeam } from '~/interfaces/past.interface';
-import { SwiperSlide } from 'swiper/vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -9,7 +9,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
-import type Swiper from 'swiper';
 
 const props = defineProps<{
   isOpen: boolean;
@@ -123,14 +122,20 @@ const setThumbsSwiper = (swiper: Swiper) => {
                 <p class="mb-4">{{ props.activeWinningTeam?.ranking }}</p>
                 <p class="text-2xl">{{ props.activeWinningTeam?.team_name }}</p>
               </DialogTitle>
-              <p class="mb-4">獲獎團隊 |</p>
+              <p class="mb-4">團隊類型 |</p>
               <p class="text-lg">{{ props.activeWinningTeam?.team_members }}</p>
             </div>
           </div>
           <hr class="my-8" />
           <DialogDescription class="text-lg leading-8">
-            <p class="mb-4">成果說明 |</p>
-            <p class="text-lg">{{ props.activeWinningTeam?.description }}</p>
+            <div
+              v-for="(item, index) in props.activeWinningTeam?.descriptions"
+              :key="index"
+              class="mb-10"
+            >
+              <p class="mb-2">{{ item.title }} |</p>
+              <AtomSaveHtml class="text-lg break-words" :html="item.content ?? ''" />
+            </div>
           </DialogDescription>
         </DialogPanel>
       </div>

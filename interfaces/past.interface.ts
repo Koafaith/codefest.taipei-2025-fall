@@ -12,7 +12,10 @@ export interface PastWinningTeam {
   /** 團隊成員 */
   team_members: string;
   /** 團隊簡介 */
-  description: string;
+  descriptions: {
+    title: string;
+    content: string;
+  }[];
   /** 多圖連結 */
   image_list: string[];
 }

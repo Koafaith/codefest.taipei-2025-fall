@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import type { News } from '~/interfaces/news.interface';
 import type { JudgeList } from '~/interfaces/judge.interface';
-import type { PastVideo } from '~/interfaces/past.interface';
+import type { PastVideo, PastWinningTeam } from '~/interfaces/past.interface';
 import type { Sponsor } from '~/interfaces/sponsor.interface';
 import { useDialogStore } from '~/stores/dialogStore';
 import { ROUTE_PATHS } from '~/constants/routes';
@@ -51,9 +51,9 @@ const availableNews = computed(() => newsList.value.filter(item => item.availabl
 /** 選中的最新消息 */
 const activeNews = ref<News | null>(null);
 
-/** 影音回顧 */
-const videoList = computed<PastVideo[]>(() => {
-  const data = tm('past.videos.list');
+/** 參賽回顧 */
+const winningTeamList = computed<PastWinningTeam[]>(() => {
+  const data = tm('past.winning_teams.list');
   return Array.isArray(data) ? data : Object.values(data); // 轉換 Object 為 Array
 });
 
@@ -69,7 +69,7 @@ const pastSlidesPerPage = 3;
  * 參賽回顧 - 總頁數
  */
 
-const pastTotalPages = computed(() => Math.ceil(videoList.value.length / pastSlidesPerPage));
+const pastTotalPages = computed(() => Math.ceil(winningTeamList.value.length / pastSlidesPerPage));
 
 const currentScheduleIndex = computed(() =>
   scheduleList.value.findIndex(tab => tab.id === activeSchedule.value.id)
@@ -101,6 +101,9 @@ const isRegistrationClosed = computed(() => {
   const deadline = new Date(tm('schedule.apply_count_down'));
   return new Date() > deadline;
 });
+
+/** 選中的獲獎團隊 */
+const activeWinningTeam = ref<PastWinningTeam | null>(null);
 
 onMounted(() => {
   calculateBannerHeight();
@@ -804,7 +807,7 @@ const showPopup = (activeNews?: News) => {
                   }"
                   @slide-change="onPastSlideChange"
                 >
-                  <SwiperSlide v-for="(group, index) in videoList" :key="index">
+                  <SwiperSlide v-for="(group, index) in winningTeamList" :key="index">
                     <div :key="group.id">
                       <a
                         v-kb-focus="{
@@ -812,9 +815,12 @@ const showPopup = (activeNews?: News) => {
                           x: index + 1,
                           y: 31,
                         }"
-                        :href="group.video_url"
-                        target="_blank"
+                        href="javascript:void(0)"
                         class="m-1 inline-block"
+                        @click="
+                          activeWinningTeam = group;
+                          dialogStore.openDialog('winningTeam');
+                        "
                       >
                         <div class="video-box relative">
                           <img
@@ -823,12 +829,12 @@ const showPopup = (activeNews?: News) => {
                             alt=""
                           />
                           <!-- 播放按鈕 -->
-                          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                          <!-- <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                             <img src="@/assets/images/icons/play.png" width="40" alt="play_btn" />
-                          </div>
+                          </div> -->
                         </div>
                         <div class="flex justify-between items-center mt-2 text-lg text-white">
-                          <span>{{ group.title }}</span>
+                          <span>{{ group.ranking }} | {{ group.team_name }}</span>
                           <span>
                             <img
                               src="@/assets/images/icons/white-right-arrow.svg"
@@ -844,8 +850,18 @@ const showPopup = (activeNews?: News) => {
               </div>
               <!-- mobile -->
               <div class="lg:hidden block">
-                <div v-for="(group, index) in videoList.slice(0, 3)" :key="index" class="mb-8">
-                  <a :href="group.video_url" target="_blank">
+                <div
+                  v-for="(group, index) in winningTeamList.slice(0, 3)"
+                  :key="index"
+                  class="mb-8"
+                >
+                  <a
+                    href="javascript:void(0)"
+                    @click="
+                      activeWinningTeam = group;
+                      dialogStore.openDialog('winningTeam');
+                    "
+                  >
                     <div class="video-box relative">
                       <img
                         :src="group.thumbnail"
@@ -853,16 +869,16 @@ const showPopup = (activeNews?: News) => {
                         alt=""
                       />
                       <!-- 播放按鈕 -->
-                      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                      <!-- <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                         <div
                           class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-[0_0_6px]"
                         >
                           <span class="text-black text-4xl font-bold">▶</span>
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                     <div class="flex justify-between items-center mt-2 text-lg text-white">
-                      <span>{{ group.title }}</span>
+                      <span>{{ group.ranking }} | {{ group.team_name }}</span>
                       <span>→</span>
                     </div>
                   </a>
@@ -994,6 +1010,14 @@ const showPopup = (activeNews?: News) => {
       :active-news="activeNews"
       @close="
         activeNews = null;
+        dialogStore.closeDialog();
+      "
+    />
+    <OrganismWinningTeamDialog
+      :is-open="activeDialog === 'winningTeam'"
+      :active-winning-team="activeWinningTeam"
+      @close="
+        activeWinningTeam = null;
         dialogStore.closeDialog();
       "
     />

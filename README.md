@@ -236,7 +236,7 @@ components 元件管理採用 [Atomic Design](https://bradfrost.com/blog/post/at
 | team_name | 團隊名稱 | "綠擘者聯盟" |
 | thumbnail | 團隊照片路徑 | "images/news-sample.png" |
 | team_members | 團隊成員 | "吳典叡(臺大電機系學會-資訊部長)、陳柏叡(臺大電機系學會-資訊部長)..." |
-| description | 團隊介紹 | "建築減碳健診隊團隊開發高互動性的災害應變儀表板..." |
+| descriptions | 團隊介紹 | [{"title": "團隊簡介", "content": "建築減碳健診隊團隊開發高互動性的災害應變儀表板..."}] |
 | image_list | 團隊作品圖片列表 | ["images/news-sample.png", "images/news-sample2.png", ...] |
 
 ##### PastVideos
