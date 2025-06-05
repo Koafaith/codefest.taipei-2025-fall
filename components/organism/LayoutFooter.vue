@@ -37,11 +37,11 @@ const contactBtns = computed(() => {
           <div class="lg:col-span-3 p-4 flex flex-col border border-r-white">
             <OrganismLayoutNavbar type="footer" nav-class="lg:flex mb-6 lg:mb-0 text-white" />
             <div class="mt-auto">
-              <p>{{ tm('contact.address_ntpc') }}</p>
-              <p>{{ tm('contact.address_tpe') }}</p>
-              <p>LINE {{ tm('contact.line_id') }}</p>
-              <p>EMAIL {{ tm('contact.email') }}</p>
-              <p>服務時間：{{ tm('contact.office_hours') }}</p>
+              <p v-if="tm('contact.address_ntpc')">{{ tm('contact.address_ntpc') }}</p>
+              <p v-if="tm('contact.address_tpe')">{{ tm('contact.address_tpe') }}</p>
+              <p v-if="tm('contact.line_id')">LINE {{ tm('contact.line_id') }}</p>
+              <p v-if="tm('contact.email')">EMAIL {{ tm('contact.email') }}</p>
+              <p v-if="tm('contact.office_hours')">服務時間：{{ tm('contact.office_hours') }}</p>
             </div>
           </div>
           <div class="lg:col-span-1 p-4 border border-r-white font-px437">

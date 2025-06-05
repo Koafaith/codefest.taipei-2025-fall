@@ -65,15 +65,15 @@ onMounted(() => {
           <p class="section-title font-fusion-pixel">
             {{ activeTab.name }}
           </p>
-          <div
+          <!-- <div
             class="lg:flex block justify-center items-center font-fusion-pixel text-white lg:p-10 px-2 py-6 text-center border border-b-white"
           >
             <p class="mb-4 lg:mb-0">競賽倒數</p>
             <MoleculeCountDown :target-date="new Date(tm('schedule.count_down'))" />
-          </div>
-          <div class="lg:flex block">
+          </div> -->
+          <div class="mt-8 lg:flex block">
             <!-- desktop 左側 Tabs -->
-            <div class="lg:block hidden p-4 border-r border-white">
+            <div class="lg:block hidden p-4 border-t border-r border-white">
               <div class="flex">
                 <div class="relative flex flex-col">
                   <template v-for="(tab, index) in tabList" :key="tab.id">
@@ -124,7 +124,7 @@ onMounted(() => {
             </div>
 
             <!-- 右側內容區 -->
-            <div class="flex-1">
+            <div class="flex-1 border-t border-white">
               <div class="flex-1 text-white">
                 <div class="w-full overflow-auto">
                   <NuxtPage />
