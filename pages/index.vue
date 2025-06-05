@@ -29,7 +29,7 @@ const bannerContentList = computed<{ label: string; value: string }[]>(() => {
 
 /** 評審列表 */
 const judgeList = computed<JudgeList[]>(() => {
-  const data = tm('rules.judges');
+  const data = tm('rules.judges').list;
   return Array.isArray(data) ? data : Object.values(data); // 轉換 Object 為 Array
 });
 
@@ -570,8 +570,8 @@ const showPopup = (activeNews?: News) => {
                             <div class="judge-box relative">
                               <img
                                 :src="judge.thumbnail"
-                                class="w-full h-full object-cover"
-                                alt=""
+                                class="w-full h-full object-cover object-top"
+                                :alt="`評審照片-${judge.name}`"
                               />
                               <p class="px-4 py-2 bg-white absolute -left-3 -bottom-3">
                                 {{ judge.name }}
@@ -601,8 +601,8 @@ const showPopup = (activeNews?: News) => {
                               <div class="judge-box relative">
                                 <img
                                   :src="runtimeConfig.app.baseURL + judge.thumbnail"
-                                  class="w-full h-full object-cover"
-                                  alt=""
+                                  class="w-full h-full object-cover object-top"
+                                  :alt="`評審照片-${judge.name}`"
                                 />
                                 <p class="px-4 py-2 bg-white absolute -left-3 -bottom-3">
                                   {{ judge.name }}

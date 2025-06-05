@@ -20,15 +20,80 @@
         "content": "在智慧城市與數據驅動時代，創新技術成為推動城市發展與提升市政服務的關鍵。2025這一屆獨特的雙北黑客松將帶領我們探索如何運用開源技術與數據可視化，挑戰傳統思維，實現跨縣市合作，共同創造出更具競爭力的智慧解決方案。\n透過結合創新設計與先進技術，我們期望進一步優化市政服務，推動雙北邁向智慧城市的未來。如有任何疑問，歡迎隨時聯絡我們！\n心動了嗎？ 趕快報名！",
         "buttons": [],
         "judges": {
-            "available": false,
+            "available": true,
             "list": [
                 {
                     "name": "初選",
-                    "list": []
+                    "list": [
+                        {
+                            "id": 0,
+                            "thumbnail": "images/judges/judge-1-1.jpg",
+                            "name": "李欣穎",
+                            "corporation": "開放文化基金會",
+                            "position": "執行長"
+                        },
+                        {
+                            "id": 1,
+                            "thumbnail": "images/judges/judge-1-2.jpg",
+                            "name": "沈昇勳",
+                            "corporation": "悠遊卡股份有限公司",
+                            "position": "獨立董事"
+                        },
+                        {
+                            "id": 2,
+                            "thumbnail": "images/judges/judge-1-3.jpg",
+                            "name": "宋祥瑀​",
+                            "corporation": "儀表板開發團隊",
+                            "position": ""
+                        },
+                        {
+                            "id": 3,
+                            "thumbnail": "images/judges/judge-1-4.jpg",
+                            "name": "潘相輔",
+                            "corporation": "儀表板開發團隊",
+                            "position": ""
+                        }
+                    ]
                 },
                 {
                     "name": "決選",
-                    "list": []
+                    "list": [
+                        {
+                            "id": 4,
+                            "thumbnail": "images/judges/judge-2-1.jpg",
+                            "name": "趙式隆",
+                            "corporation": "臺北市政府資訊局",
+                            "position": "局長"
+                        },
+                        {
+                            "id": 5,
+                            "thumbnail": "images/judges/judge-2-2.jpg",
+                            "name": "陳富添",
+                            "corporation": "新北市政府資訊中心",
+                            "position": "主任"
+                        },
+                        {
+                            "id": 6,
+                            "thumbnail": "images/judges/judge-2-3.jpg",
+                            "name": "高信雄",
+                            "corporation": "中央警察大學資訊管理學系",
+                            "position": "助理教授"
+                        },
+                        {
+                            "id": 7,
+                            "thumbnail": "images/judges/judge-2-4.jpg",
+                            "name": "吳達偉",
+                            "corporation": "新竹市勞工及青年處",
+                            "position": "處長"
+                        },
+                        {
+                            "id": 8,
+                            "thumbnail": "images/judges/judge-2-5.jpg",
+                            "name": "林奕辰",
+                            "corporation": "洽吧智能",
+                            "position": "創辦人＆執行長"
+                        }
+                    ]
                 }
             ]
         },
