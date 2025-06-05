@@ -273,7 +273,7 @@
         ]
     },
     "news": {
-        "available": true,
+        "available": false,
         "section_title": "最新消息",
         "list": [
             {
