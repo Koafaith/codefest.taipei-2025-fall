@@ -30,12 +30,15 @@ const setThumbsSwiper = (swiper: Swiper) => {
 };
 
 // Reset swiper state when dialog closes
-watch(() => props.isOpen, (newValue) => {
-  if (!newValue) {
-    thumbsSwiper.value = null;
-    swiperReady.value = false;
+watch(
+  () => props.isOpen,
+  newValue => {
+    if (!newValue) {
+      thumbsSwiper.value = null;
+      swiperReady.value = false;
+    }
   }
-});
+);
 </script>
 
 <template>
@@ -92,7 +95,10 @@ watch(() => props.isOpen, (newValue) => {
                     </SwiperSlide>
                   </Swiper>
                   <!-- 自訂左按鈕 -->
-                  <button class="team-swiper-button-prev custom-nav-btn">
+                  <button
+                    v-if="props.activeWinningTeam?.image_list?.length > 1"
+                    class="team-swiper-button-prev custom-nav-btn"
+                  >
                     <img
                       src="@/assets/images/icons/white-down-arrow.svg"
                       alt="arrow"
@@ -101,7 +107,10 @@ watch(() => props.isOpen, (newValue) => {
                     />
                   </button>
                   <!-- 自訂右按鈕 -->
-                  <button class="team-swiper-button-next custom-nav-btn">
+                  <button
+                    v-if="props.activeWinningTeam?.image_list?.length > 1"
+                    class="team-swiper-button-next custom-nav-btn"
+                  >
                     <img
                       src="@/assets/images/icons/white-down-arrow.svg"
                       alt="arrow"
@@ -137,7 +146,7 @@ watch(() => props.isOpen, (newValue) => {
                 <p class="mb-4">{{ props.activeWinningTeam?.ranking }}</p>
                 <p class="text-2xl">{{ props.activeWinningTeam?.team_name }}</p>
               </DialogTitle>
-              <p class="mb-4">團隊類型 |</p>
+              <p class="mb-4">團隊組成 |</p>
               <p class="text-lg">{{ props.activeWinningTeam?.team_members }}</p>
             </div>
           </div>
