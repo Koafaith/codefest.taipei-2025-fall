@@ -272,3 +272,5 @@ components 元件管理採用 [Atomic Design](https://bradfrost.com/blog/post/at
 |------|------|------|
 | name | 政策名稱 | "政府網站資料開放宣告" |
 | link | 政策連結 | |
+
+[![Maintained by Koafaith](https://img.shields.io/badge/maintained%20by-Koafaith-blue)](https://github.com/Koafaith)
