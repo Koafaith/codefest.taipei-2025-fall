@@ -454,7 +454,7 @@
                     "id": 2,
                     "ranking": "第三名",
                     "team_name": "ex-Wee",
-                    "thumbnail": "images/winning-teams/team-3-1.jpg",
+                    "thumbnail": "images/winning-teams/team-3.jpg",
                     "team_members": "企業(Vpon、友愉、台積電、群暉)",
                     "descriptions": [
                         {
@@ -475,14 +475,14 @@
                         }
                     ],
                     "image_list": [
-                        "images/winning-teams/team-3-1.jpg"
+                        "images/winning-teams/team-3.jpg"
                     ]
                 },
                 {
                     "id": 3,
                     "ranking": "佳作1",
                     "team_name": "粽子裡沒 bug",
-                    "thumbnail": "images/winning-teams/team-4-1.jpg",
+                    "thumbnail": "images/winning-teams/team-4.jpg",
                     "team_members": "成功大學、政治大學、企業(中嘉、LINE PAY、土地銀行)",
                     "descriptions": [
                         {
@@ -503,14 +503,14 @@
                         }
                     ],
                     "image_list": [
-                        "images/winning-teams/team-4-1.jpg"
+                        "images/winning-teams/team-4.jpg"
                     ]
                 },
                 {
                     "id": 4,
                     "ranking": "佳作2",
                     "team_name": "木柵派大星",
-                    "thumbnail": "images/winning-teams/team-5-1.jpg",
+                    "thumbnail": "images/winning-teams/team-5.jpg",
                     "team_members": "政治大學、臺灣大學",
                     "descriptions": [
                         {
@@ -531,7 +531,7 @@
                         }
                     ],
                     "image_list": [
-                        "images/winning-teams/team-5-1.jpg"
+                        "images/winning-teams/team-5.jpg"
                     ]
                 },
                 {
