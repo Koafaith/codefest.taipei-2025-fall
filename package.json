@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nuxt dev --host 0.0.0.0",
     "build": "nuxt build",
-    "generate": "nuxt generate && mv .output/public public/prod",
+    "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint:js": "eslint . --fix --config eslint.config.mjs",

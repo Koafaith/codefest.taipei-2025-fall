@@ -8,7 +8,6 @@ export default withNuxt([
       '**/.nuxt/**',
       'node_modules/**',
       'dist/**',
-      'public/prod/**',
       '_archived/**',
     ],
     files: ['**/*.ts', '**/*.js', '**/*.vue'],
