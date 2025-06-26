@@ -205,7 +205,7 @@ const videoList = computed<PastVideo[]>(() => {
                 </div>
               </div>
               <div
-                v-if="t('past.photos.more_photos_url')"
+                v-if="tm('past.photos.more_photos_url')"
                 class="flex flex-col lg:flex-row justify-between items-center p-4 m-1"
               >
                 <!-- 文字區塊 (lg 以上才顯示) -->
@@ -220,7 +220,7 @@ const videoList = computed<PastVideo[]>(() => {
                   class="w-full lg:w-auto flex flex-nowrap justify-center lg:justify-end space-x-8"
                 >
                   <AtomButton
-                    :href="t('past.photos.more_photos_url')"
+                    :href="tm('past.photos.more_photos_url')"
                     :icon-type="'arrow'"
                     class="w-1/2 lg:w-auto lg:min-w-60"
                   >
