@@ -181,7 +181,7 @@ const videoList = computed<PastVideo[]>(() => {
                       >
                         <div class="video-box relative">
                           <img
-                            :src="group.thumbnail"
+                            :src="runtimeConfig.app.baseURL + group.thumbnail"
                             class="w-full h-full object-cover transition-all duration-300 group-hover:brightness-75"
                             alt=""
                           />
