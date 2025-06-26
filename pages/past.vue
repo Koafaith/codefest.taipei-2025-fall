@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
-import type { PastVideo, PastWinningTeam } from '~/interfaces/past.interface';
+import type { PastPhoto, PastVideo, PastWinningTeam } from '~/interfaces/past.interface';
 
 const { t, tm } = useI18n();
 const dialogStore = useDialogStore();
@@ -12,8 +12,18 @@ const winningTeamList = computed<PastWinningTeam[]>(() => {
   const data = tm('past.winning_teams.list');
   return Array.isArray(data) ? data : Object.values(data); // 轉換 Object 為 Array
 });
+
 /** 選中的獲獎團隊 */
 const activeWinningTeam = ref<PastWinningTeam | null>(null);
+
+/** 照片回顧 */
+const photoList = computed<PastPhoto[]>(() => {
+  const data = tm('past.photos.list');
+  return Array.isArray(data) ? data : Object.values(data); // 轉換 Object 為 Array
+});
+
+/** 選中的照片回顧 */
+const activePhoto = ref<PastPhoto | null>(null);
 
 /** 影音回顧 */
 const videoList = computed<PastVideo[]>(() => {
@@ -119,6 +129,98 @@ const videoList = computed<PastVideo[]>(() => {
                 >
                   <AtomButton
                     :href="t('more_winning_team_photos_url')"
+                    :icon-type="'arrow'"
+                    class="w-1/2 lg:w-auto lg:min-w-60"
+                  >
+                    更多照片回顧
+                  </AtomButton>
+                </div>
+              </div>
+            </DisclosurePanel>
+          </Disclosure>
+          <!-- 照片回顧 -->
+          <Disclosure v-slot="{ open }" :default-open="true">
+            <DisclosureButton
+              v-kb-focus="{
+                id: `past-button-1-10`,
+                x: 1,
+                y: 10,
+              }"
+              class="w-full h-16 flex items-center justify-between p-2 border border-t-white border-b-white bg-primary-300"
+            >
+              <p class="font-fusion-pixel text-white text-lg text-center mx-auto">
+                {{ tm('past.photos.title') }}
+              </p>
+              <img
+                src="@/assets/images/icons/white-down-arrow.svg"
+                alt="arrow"
+                width="20"
+                class="absolute right-5 transition-transform duration-300"
+                :class="{ 'rotate-180': open }"
+              />
+            </DisclosureButton>
+            <DisclosurePanel>
+              <div class="lg:p-12 p-6 border-b border-white">
+                <div class="grid lg:grid-cols-3 grid-cols-1 gap-8">
+                  <div
+                    v-for="(group, index) in photoList"
+                    :key="index"
+                    v-kb-focus="{
+                      id: `past-team-${index + 1}-${index + 3}`,
+                      x: index + 1,
+                      y: index + 3,
+                    }"
+                  >
+                    <div :key="group.id">
+                      <a
+                        href="javascript:void(0)"
+                        @click="
+                          activePhoto = group;
+                          dialogStore.openDialog('photo');
+                        "
+                      >
+                        <div class="video-box relative">
+                          <img
+                            :src="group.thumbnail"
+                            class="w-full h-full object-cover transition-all duration-300 group-hover:brightness-75"
+                            alt=""
+                          />
+                        </div>
+                        <div
+                          class="lg:block flex items-center mt-2 lg:text-lg text-base text-white"
+                        >
+                          <p class="flex justify-between items-center">
+                            <span>{{ group.title }}</span>
+                            <img
+                              src="@/assets/images/icons/white-right-arrow.svg"
+                              width="24"
+                              class="lg:inline-block hidden"
+                              alt="white-right-arrow"
+                            />
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                v-if="t('past.photos.more_photos_url')"
+                class="flex flex-col lg:flex-row justify-between items-center p-4 m-1"
+              >
+                <!-- 文字區塊 (lg 以上才顯示) -->
+                <div class="hidden lg:block flex-1">
+                  <p class="font-px437 text-white typing-container mr-2">
+                    View More Photos：View →
+                  </p>
+                </div>
+
+                <!-- 按鈕區塊 -->
+                <div
+                  class="w-full lg:w-auto flex flex-nowrap justify-center lg:justify-end space-x-8"
+                >
+                  <AtomButton
+                    :href="t('past.photos.more_photos_url')"
                     :icon-type="'arrow'"
                     class="w-1/2 lg:w-auto lg:min-w-60"
                   >
@@ -239,6 +341,14 @@ const videoList = computed<PastVideo[]>(() => {
       :active-winning-team="activeWinningTeam"
       @close="
         activeWinningTeam = null;
+        dialogStore.closeDialog();
+      "
+    />
+    <OrganismPhotoDialog
+      :is-open="activeDialog === 'photo'"
+      :active-photo="activePhoto"
+      @close="
+        activePhoto = null;
         dialogStore.closeDialog();
       "
     />

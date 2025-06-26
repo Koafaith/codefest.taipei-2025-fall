@@ -2,7 +2,7 @@ import { defineStore } from 'pinia';
 import { ref, watch } from 'vue';
 
 export const useDialogStore = defineStore('dialogStore', () => {
-  const activeDialog = ref<null | 'apply' | 'news' | 'mobileMenu' | 'winningTeam'>(null);
+  const activeDialog = ref<null | 'apply' | 'news' | 'mobileMenu' | 'winningTeam' | 'photo'>(null);
 
   // 控制 body scroll
   watch(activeDialog, val => {
