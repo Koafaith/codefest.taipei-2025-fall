@@ -26,7 +26,15 @@ const emit = defineEmits(['close']);
 
         <!-- 標題區域 -->
         <div class="pt-16 px-6">
-          <p class="text-primary-500 text-lg mb-2">{{ activeNews?.date }}</p>
+          <div class="text-lg mb-2 flex items-center">
+            <span class="mr-2">{{ activeNews?.date }}</span>
+            <div
+              class="text-sm bg-secondary-500 text-white px-2 py-1 shadow-md"
+              :class="{ 'bg-primary-50 text-primary-500': activeNews?.tag === 'news' }"
+            >
+              <span>{{ activeNews?.tag === 'news' ? '最新消息' : '媒體報導' }}</span>
+            </div>
+          </div>
           <DialogTitle class="text-primary-500 text-2xl pb-4 mb-4 custom-dashed dashed-black">
             {{ activeNews?.title }}
           </DialogTitle>
