@@ -181,6 +181,11 @@ export default defineNuxtPlugin(nuxtApp => {
 
   // 鍵盤事件
   window.addEventListener('keydown', e => {
+    // 如果當前焦點在輸入框上，不處理鍵盤導航
+    if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+      return;
+    }
+
     switch (e.key) {
       case 'ArrowUp':
         e.preventDefault();
