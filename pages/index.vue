@@ -47,7 +47,47 @@ const newsList = computed<News[]>(() => {
   return Array.isArray(data) ? data : Object.values(data); // 轉換 Object 為 Array
 });
 /** 目前顯示的最新消息 */
-const availableNews = computed(() => newsList.value.filter(item => item.available));
+const availableNews = computed(() => {
+  let filtered = newsList.value.filter((item: News) => item.available);
+
+  // 關鍵字搜尋
+  if (newsKeyword.value) {
+    const keyword = newsKeyword.value.toLowerCase();
+    filtered = filtered.filter(
+      (item: News) =>
+        item.title.toLowerCase().includes(keyword) || item.date.toLowerCase().includes(keyword)
+    );
+  }
+
+  // 時間篩選
+  if (newsTimeFilter.value !== 'all') {
+    const now = new Date();
+    const filterDate = new Date();
+    switch (newsTimeFilter.value) {
+      case 'week':
+        filterDate.setDate(now.getDate() - 7);
+        break;
+      case 'month':
+        filterDate.setMonth(now.getMonth() - 1);
+        break;
+      case 'year':
+        filterDate.setFullYear(now.getFullYear() - 1);
+        break;
+    }
+    filtered = filtered.filter(
+      (item: News) => new Date(item.date).getTime() >= filterDate.getTime()
+    );
+  }
+
+  // 排序
+  filtered.sort((a: News, b: News) => {
+    const dateA = new Date(a.date).getTime();
+    const dateB = new Date(b.date).getTime();
+    return newsSort.value === 'newest' ? dateB - dateA : dateA - dateB;
+  });
+
+  return filtered;
+});
 /** 選中的最新消息 */
 const activeNews = ref<News | null>(null);
 
@@ -84,13 +124,17 @@ const onPastSlideChange = (event: any) => {
   }
 };
 
-/** 贊助單位 */
+/** 感謝單位 */
 const sponsorList = computed<Sponsor[]>(() => {
   const data = tm('sponsor.list');
   return Array.isArray(data) ? data : Object.values(data); // 轉換 Object 為 Array
 });
 
-const duplicatedSponsorList = computed(() => [...sponsorList.value, ...sponsorList.value]);
+const duplicatedSponsorList = computed(() => {
+  // 重複 4 次內容以確保無縫循環
+  const originalList = sponsorList.value;
+  return [...originalList, ...originalList, ...originalList, ...originalList];
+});
 
 // 存放距離
 const tabToContentDistance = ref(0);
@@ -159,6 +203,13 @@ const showPopup = (activeNews?: News) => {
     }
   }
 };
+
+/** 最新消息排序 */
+const newsSort = ref('newest');
+/** 最新消息時間篩選 */
+const newsTimeFilter = ref('all');
+/** 最新消息關鍵字 */
+const newsKeyword = ref('');
 </script>
 
 <template>
@@ -798,8 +849,8 @@ const showPopup = (activeNews?: News) => {
                 :default-open="activeSchedule.id === tab.id"
               >
                 <DisclosureButton
-                  class="w-full flex items-center justify-between p-6 border border-t-white border-b-white"
-                  :class="{ 'bg-primary-50': open }"
+                  class="w-full flex items-center justify-between p-6 border border-t-white border-b-white transition-colors duration-200"
+                  :class="[open ? 'bg-primary-50 text-primary-500' : 'text-white']"
                 >
                   <p class="text-center mx-auto" :class="open ? 'text-primary-500' : 'text-white'">
                     {{ tab.schedule_name }}
@@ -889,6 +940,43 @@ const showPopup = (activeNews?: News) => {
                 <p class="section-title font-fusion-pixel">最新消息</p>
 
                 <div class="lg:px-10 lg:py-14 p-4 pt-10 border border-b-white">
+                  <!-- 功能列 -->
+                  <div class="flex flex-wrap gap-4 mb-6 text-white">
+                    <!-- 排序 -->
+                    <div class="flex items-center">
+                      <span class="mr-2">排序：</span>
+                      <select
+                        v-model="newsSort"
+                        class="bg-primary-300 border border-white px-2 py-1 pr-8 appearance-none"
+                      >
+                        <option value="newest">最新優先</option>
+                        <option value="oldest">最舊優先</option>
+                      </select>
+                    </div>
+                    <!-- 時間篩選 -->
+                    <div class="flex items-center">
+                      <span class="mr-2">時間：</span>
+                      <select
+                        v-model="newsTimeFilter"
+                        class="bg-primary-300 border border-white px-2 py-1 pr-8 appearance-none"
+                      >
+                        <option value="all">全部</option>
+                        <option value="week">一週內</option>
+                        <option value="month">一個月內</option>
+                        <option value="year">一年內</option>
+                      </select>
+                    </div>
+                    <!-- 關鍵字搜尋 -->
+                    <div class="flex items-center flex-1">
+                      <input
+                        v-model="newsKeyword"
+                        type="text"
+                        placeholder="搜尋關鍵字..."
+                        class="bg-primary-300 border border-white px-2 py-1 flex-1"
+                      />
+                    </div>
+                  </div>
+
                   <div class="space-y-6 text-white max-h-[347px] lg:pr-4 overflow-auto">
                     <a
                       v-for="(news, index) in availableNews"
@@ -911,7 +999,15 @@ const showPopup = (activeNews?: News) => {
                         showPopup(news);
                       "
                     >
-                      <p class="text-lg mb-2">{{ news.date }}</p>
+                      <div class="text-lg mb-2 flex items-center">
+                        <span class="mr-2">{{ news.date }}</span>
+                        <div
+                          class="text-sm bg-secondary-500 text-white px-2 py-1 shadow-md"
+                          :class="{ 'bg-primary-50 text-primary-500': news.tag === 'news' }"
+                        >
+                          <span>{{ news.tag === 'news' ? '最新消息' : '媒體報導' }}</span>
+                        </div>
+                      </div>
                       <p class="text-xl text-ellipsis right-arrow">
                         {{ news.title }}
                       </p>
@@ -950,7 +1046,7 @@ const showPopup = (activeNews?: News) => {
       </section>
       <AtomSectionDecoration direction="right" />
     </template>
-    <!-- 第6幀 - 贊助單位 -->
+    <!-- 第6幀 - 感謝單位 -->
     <template v-if="tm('sponsor').available">
       <div class="lg:flex justify-end hidden">
         <MoleculeSectionNav active-nav-name="sponsor" :focus-y="40" />
@@ -958,41 +1054,68 @@ const showPopup = (activeNews?: News) => {
       <section id="sponsor" class="2xl:p-0 p-5">
         <div class="border border-white relative">
           <div class="m-1 border border-white">
-            <p class="section-title font-fusion-pixel">贊助單位</p>
+            <p class="section-title font-fusion-pixel">{{ tm('sponsor').section_title }}</p>
             <div class="p-10 border border-b-white">
               <!-- 輪播效果 -->
               <div class="relative w-full overflow-hidden">
-                <div class="marquee-container overflow-hidden">
-                  <div class="marquee-content marquee-left flex">
-                    <div
-                      v-for="sponsor in duplicatedSponsorList"
-                      :key="sponsor.id"
-                      class="max-w-[200px] p-4 flex-shrink-0 mr-10"
-                    >
-                      <div class="group block">
-                        <img
-                          :src="runtimeConfig.app.baseURL + sponsor.image_url"
-                          alt=""
-                          class="w-full h-auto"
-                        />
+                <!-- Desktop 輪播 -->
+                <div class="hidden lg:block">
+                  <div class="marquee-container">
+                    <div class="marquee-content marquee-left flex">
+                      <!-- 重複多次內容以實現無縫循環 -->
+                      <div
+                        v-for="(sponsor, index) in duplicatedSponsorList"
+                        :key="`desktop-${sponsor.id}-${index}`"
+                        class="sponsor-item flex-shrink-0 mr-10 flex items-center justify-center"
+                      >
+                        <div class="group block">
+                          <img
+                            :src="runtimeConfig.app.baseURL + sponsor.image_url"
+                            alt="sponsor"
+                            class="w-auto h-[80px] object-contain"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
+                <!-- Mobile 輪播 -->
                 <div class="lg:hidden block">
-                  <div class="marquee-container marquee-right overflow-hidden">
+                  <!-- 第一排：往右移動 -->
+                  <div class="marquee-container mb-4">
                     <div class="marquee-content marquee-right flex">
+                      <!-- 重複多次內容以實現無縫循環 -->
                       <div
-                        v-for="sponsor in duplicatedSponsorList"
-                        :key="sponsor.id"
-                        class="max-w-[200px] p-4 flex-shrink-0 mr-10"
+                        v-for="(sponsor, index) in duplicatedSponsorList"
+                        :key="`mobile-right-${sponsor.id}-${index}`"
+                        class="sponsor-item flex-shrink-0 mr-10 flex items-center justify-center"
                       >
                         <div class="group block">
                           <img
                             :src="runtimeConfig.app.baseURL + sponsor.image_url"
-                            alt=""
-                            class="w-full h-auto"
+                            alt="sponsor"
+                            class="w-auto h-[60px] object-contain"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 第二排：往左移動 -->
+                  <div class="marquee-container">
+                    <div class="marquee-content marquee-left flex">
+                      <!-- 重複多次內容以實現無縫循環 -->
+                      <div
+                        v-for="(sponsor, index) in duplicatedSponsorList"
+                        :key="`mobile-left-${sponsor.id}-${index}`"
+                        class="sponsor-item flex-shrink-0 mr-10 flex items-center justify-center"
+                      >
+                        <div class="group block">
+                          <img
+                            :src="runtimeConfig.app.baseURL + sponsor.image_url"
+                            alt="sponsor"
+                            class="w-auto h-[60px] object-contain"
                           />
                         </div>
                       </div>
@@ -1160,49 +1283,66 @@ const showPopup = (activeNews?: News) => {
 
 /** 輪播 */
 .marquee-container {
-  height: 101%;
-  transform: translate(-1px, -1px);
+  height: 120px; /* Desktop 高度 */
   overflow: hidden;
-  display: flex;
+  position: relative;
+
+  @media (max-width: 1024px) {
+    height: 80px; /* Mobile 單排高度，因為有兩排 */
+  }
 
   .marquee-content {
+    display: flex;
     animation-play-state: running;
+    width: max-content; /* 讓內容自然展開 */
 
     img {
-      max-width: initial;
-      transform: scale(1.001);
+      max-width: none; /* 移除寬度限制 */
+      height: 100%; /* 讓圖片填滿容器高度 */
+      object-fit: contain; /* 保持比例 */
     }
   }
 
   .marquee-content.marquee-left {
-    animation: marquee-left 30s linear infinite;
+    animation: marquee-left 40s linear infinite;
   }
 
   .marquee-content.marquee-right {
-    animation: marquee-right 30s linear infinite;
+    animation: marquee-right 40s linear infinite;
   }
 
   &:hover .marquee-content {
     animation-play-state: paused;
   }
-  /* 向左滑動 */
-  @keyframes marquee-left {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+}
+
+/* 向左滑動 - 無限輪播 */
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
   }
-  /* 向右滑動 */
-  @keyframes marquee-right {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  100% {
+    transform: translateX(-50%); /* 只移動一半，因為內容已經重複了 */
   }
+}
+
+/* 向右滑動 - 無限輪播 */
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%); /* 從一半開始 */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* 贊助項目樣式 */
+.sponsor-item {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .swiper-judge-slide {
@@ -1245,5 +1385,13 @@ const showPopup = (activeNews?: News) => {
 
 .penguin {
   display: block;
+}
+
+/* 下拉選單箭頭樣式 */
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='white' d='M6 8.825L1.175 4 2.238 2.938 6 6.7l3.763-3.762L10.825 4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 24px;
 }
 </style>

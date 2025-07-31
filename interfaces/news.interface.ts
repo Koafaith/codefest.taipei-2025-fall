@@ -8,6 +8,8 @@ export interface News {
   content: string;
   /** 是否可用 */
   available: boolean;
+  /** 標籤 */
+  tag: 'news' | 'media';
   /**
    * 內文圖片
    * - 僅限一張，排在 content 前方
