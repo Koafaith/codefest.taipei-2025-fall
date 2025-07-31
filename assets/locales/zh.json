@@ -679,6 +679,26 @@
             {
                 "id": 2,
                 "image_url": "images/sponsors/實踐大學校徽及校名.svg"
+            },
+            {
+                "id": 3,
+                "image_url": "images/sponsors/sitcon_logo.svg"
+            },
+            {
+                "id": 4,
+                "image_url": "images/sponsors/師範大學_logo.svg"
+            },
+            {
+                "id": 5,
+                "image_url": "images/sponsors/OCF_logo.svg"
+            },
+            {
+                "id": 6,
+                "image_url": "images/sponsors/college-unit_LOGO-資訊管理學系.svg"
+            },
+            {
+                "id": 7,
+                "image_url": "images/sponsors/北科程式.svg"
             }
         ]
     },
