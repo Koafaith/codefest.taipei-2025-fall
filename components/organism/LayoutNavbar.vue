@@ -12,13 +12,12 @@ const { tm } = useI18n();
 
 // 計算不同類型的 nav-item class
 const navItemClass = computed(() => {
-  return (
-    {
-      header: 'header-nav-item',
-      'mobile-header': 'mobile-header-nav-item',
-      footer: 'footer-nav-item',
-    }[props.type] || ''
-  );
+  const typeMap: Record<string, string> = {
+    header: 'header-nav-item',
+    'mobile-header': 'mobile-header-nav-item',
+    footer: 'footer-nav-item',
+  };
+  return typeMap[props.type] || '';
 });
 </script>
 
@@ -28,9 +27,9 @@ const navItemClass = computed(() => {
       <li :class="navItemClass">
         <NuxtLink
           v-kb-focus="{
-            id: `${props.type}-nav-2-${props.type === 'header' ? 1 : 202}`,
+            id: `${type}-nav2-${type === 'header' ? 1 : 202}`,
             x: 2,
-            y: props.type === 'header' ? 1 : 202,
+            y: type === 'header' ? 1 : 202,
           }"
           :to="ROUTE_PATHS.RULES"
           @click="dialogStore.closeDialog()"
@@ -40,9 +39,9 @@ const navItemClass = computed(() => {
       <li :class="navItemClass">
         <NuxtLink
           v-kb-focus="{
-            id: `${props.type}-nav-3-${props.type === 'header' ? 1 : 202}`,
+            id: `${type}-nav3-${type === 'header' ? 1 : 202}`,
             x: 3,
-            y: props.type === 'header' ? 1 : 202,
+            y: type === 'header' ? 1 : 202,
           }"
           :to="`${ROUTE_PATHS.RULES}${ROUTE_PATHS.SCHEDULE}`"
           @click="dialogStore.closeDialog()"
@@ -52,9 +51,9 @@ const navItemClass = computed(() => {
       <li :class="navItemClass">
         <NuxtLink
           v-kb-focus="{
-            id: `${props.type}-nav-4-${props.type === 'header' ? 1 : 202}`,
+            id: `${type}-nav4-${type === 'header' ? 1 : 202}`,
             x: 4,
-            y: props.type === 'header' ? 1 : 202,
+            y: type === 'header' ? 1 : 202,
           }"
           :to="`${ROUTE_PATHS.RULES}${ROUTE_PATHS.FAQ}`"
           @click="dialogStore.closeDialog()"
@@ -64,9 +63,9 @@ const navItemClass = computed(() => {
       <li :class="navItemClass">
         <NuxtLink
           v-kb-focus="{
-            id: `${props.type}-nav-5-${props.type === 'header' ? 1 : 202}`,
+            id: `${type}-nav5-${type === 'header' ? 1 : 202}`,
             x: 5,
-            y: props.type === 'header' ? 1 : 202,
+            y: type === 'header' ? 1 : 202,
           }"
           :to="ROUTE_PATHS.PAST"
           @click="dialogStore.closeDialog()"
@@ -76,9 +75,9 @@ const navItemClass = computed(() => {
       <li :class="navItemClass">
         <a
           v-kb-focus="{
-            id: `${props.type}-nav-6-${props.type === 'header' ? 1 : 202}`,
+            id: `${type}-nav6-${type === 'header' ? 1 : 202}`,
             x: 6,
-            y: props.type === 'header' ? 1 : 202,
+            y: type === 'header' ? 1 : 202,
           }"
           :href="tm('past_url')"
           target="_blank"
