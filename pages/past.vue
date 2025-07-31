@@ -2,7 +2,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
 import type { PastPhoto, PastVideo, PastWinningTeam } from '~/interfaces/past.interface';
 
-const { t, tm } = useI18n();
+const { tm } = useI18n();
 const dialogStore = useDialogStore();
 const { activeDialog } = storeToRefs(dialogStore);
 const runtimeConfig = useRuntimeConfig();
@@ -113,7 +113,7 @@ const videoList = computed<PastVideo[]>(() => {
                 </div>
               </div>
               <div
-                v-if="t('past.winning_teams.more_winning_team_photos_url')"
+                v-if="tm('past.winning_teams.more_winning_team_photos_url')"
                 class="flex flex-col lg:flex-row justify-between items-center p-4 m-1"
               >
                 <!-- 文字區塊 (lg 以上才顯示) -->
@@ -128,7 +128,7 @@ const videoList = computed<PastVideo[]>(() => {
                   class="w-full lg:w-auto flex flex-nowrap justify-center lg:justify-end space-x-8"
                 >
                   <AtomButton
-                    :href="t('more_winning_team_photos_url')"
+                    :href="tm('past.winning_teams.more_winning_team_photos_url')"
                     :icon-type="'arrow'"
                     class="w-1/2 lg:w-auto lg:min-w-60"
                   >
@@ -307,7 +307,7 @@ const videoList = computed<PastVideo[]>(() => {
                 </div>
               </div>
               <div
-                v-if="t('past.videos.more_videos_url')"
+                v-if="tm('past.videos.more_videos_url')"
                 class="flex flex-col lg:flex-row justify-between items-center p-4 m-1"
               >
                 <!-- 文字區塊 (lg 以上才顯示) -->
@@ -322,7 +322,7 @@ const videoList = computed<PastVideo[]>(() => {
                   class="w-full lg:w-auto flex flex-nowrap justify-center lg:justify-end space-x-8"
                 >
                   <AtomButton
-                    :href="t('past.videos.more_videos_url')"
+                    :href="tm('past.videos.more_videos_url')"
                     :icon-type="'arrow'"
                     class="w-1/2 lg:w-auto lg:min-w-60"
                   >
