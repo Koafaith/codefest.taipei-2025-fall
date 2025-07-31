@@ -463,7 +463,7 @@
                         }
                     ],
                     "image_list": [
-                        "images/winning-teams/team-1.jpg"
+                        "images/winning-teams/team-2.jpg"
                     ]
                 },
                 {
@@ -665,9 +665,22 @@
         }
     },
     "sponsor": {
-        "available": false,
-        "section_title": "贊助單位",
-        "list": []
+        "available": true,
+        "section_title": "感謝單位",
+        "list": [
+            {
+                "id": 0,
+                "image_url": "images/sponsors/(國立臺北商業大學企業管理系)logo.svg"
+            },
+            {
+                "id": 1,
+                "image_url": "images/sponsors/(國立臺灣大學 電機工程學系學生會)NTUEESA_logo.svg"
+            },
+            {
+                "id": 2,
+                "image_url": "images/sponsors/實踐大學校徽及校名.svg"
+            }
+        ]
     },
     "faq": {
         "section_title": "FAQ",
