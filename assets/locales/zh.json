@@ -661,7 +661,29 @@
         "videos": {
             "title": "影音回顧",
             "more_videos_url": "",
-            "list": []
+            "list": [
+                {
+                    "id": 0,
+                    "date": "",
+                    "title": "2025雙北程式設計節大黑客松\n【全紀錄影片】",
+                    "thumbnail": "images/videos/1_video.png",
+                    "video_url": "https://www.youtube.com/watch?v=RCb_fGtyel0"
+                },
+                {
+                    "id": 0,
+                    "date": "",
+                    "title": "2025雙北程式設計節大黑客松\n【閉幕影片】",
+                    "thumbnail": "images/videos/2_video.png",
+                    "video_url": "https://www.youtube.com/watch?v=lFJKEKxZ8XA"
+                },
+                {
+                    "id": 0,
+                    "date": "",
+                    "title": "2025雙北程式設計節大黑客松\n【精華影片】",
+                    "thumbnail": "images/videos/3_video.png",
+                    "video_url": "https://www.youtube.com/watch?v=-FyyjkS5bLA"
+                }
+            ]
         }
     },
     "sponsor": {

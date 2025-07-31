@@ -279,7 +279,7 @@ const videoList = computed<PastVideo[]>(() => {
                         <div
                           class="flex justify-between items-center mt-2 lg:text-lg text-base text-white"
                         >
-                          <span>{{ group.title }}</span>
+                          <span class="whitespace-pre-line">{{ group.title }}</span>
                           <span>
                             <img
                               src="@/assets/images/icons/white-right-arrow.svg"
@@ -294,7 +294,7 @@ const videoList = computed<PastVideo[]>(() => {
                   </div>
                 </div>
                 <!-- 無資料時 -->
-                <div class="flex-1 flex justify-center items-center">
+                <div v-if="videoList.length === 0" class="flex-1 flex justify-center items-center">
                   <div>
                     <img
                       src="@/assets/images/icons/white-coming-soon.svg"
