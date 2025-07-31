@@ -1,5 +1,5 @@
 /**
- * 贊助單位
+ * 感謝單位
  */
 export interface Sponsor {
   id: number;

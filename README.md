@@ -120,9 +120,9 @@ components 元件管理採用 [Atomic Design](https://bradfrost.com/blog/post/at
 | | description | 參賽回顧區塊說明 | "收錄獲獎團隊及影音回顧" |
 | | winning_teams | 獲獎團隊回顧 | 參考 [PastWinningTeams](#PastWinningTeams) |
 | | videos | 影片回顧 | 參考 [PastVideos](#PastVideos) |
-| sponsor | available | 控制贊助單位區塊是否顯示 | true |
-| | section_title | 贊助單位區塊標題 | "贊助單位" |
-| | list | 贊助單位列表 | 參考 [Sponsor](#Sponsor) |
+| sponsor | available | 控制感謝單位區塊是否顯示 | true |
+| | section_title | 感謝單位區塊標題 | "感謝單位" |
+| | list | 感謝單位列表 | 參考 [Sponsor](#Sponsor) |
 | faq | section_title | FAQ區塊標題 | "FAQ" |
 | | list | FAQ列表 | {"type": "流程疑問", "list": [...]}<br>type為常見問題 Tab 標頭，傳入 "流程疑問" \| "技術疑問"<br>list 內容請參考 [Faq](#Faq) |
 | contact | address_ntpc | 新北市政府地址 | "220242 新北市板橋區中山路一段161號" |
@@ -258,8 +258,8 @@ components 元件管理採用 [Atomic Design](https://bradfrost.com/blog/post/at
 ##### Sponsor
 | 參數 | 說明 | 範例 |
 |------|------|------|
-| id | 贊助單位編號 | 0 |
-| image_url | 贊助單位 logo | "images/sponsors/sponsor-sample.png" |
+| id | 感謝單位編號 | 0 |
+| image_url | 感謝單位 logo | "images/sponsors/sponsor-sample.png" |
 
 ##### Faq
 | 參數 | 說明 | 範例 |

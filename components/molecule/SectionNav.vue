@@ -37,7 +37,7 @@ const sectionNav = ref([
   },
   {
     name: 'sponsor',
-    zhName: '贊助單位',
+    zhName: '感謝單位',
     icon_url: `${runtimeConfig.app.baseURL}images/icons/icon-sponsor.svg`,
     is_selected: false,
     available: tm('sponsor').available,
