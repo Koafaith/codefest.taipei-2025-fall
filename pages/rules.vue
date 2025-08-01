@@ -1,35 +1,41 @@
+ts
 <script setup lang="ts">
 import { ROUTE_PATHS } from '~/constants/routes';
 
 const { tm } = useI18n();
 const route = useRoute();
 
-const tabList = [
+const tabListConfig = [
   {
     id: 'rules',
     name: '競賽規則',
     path: `${ROUTE_PATHS.RULES}`,
-    available: tm('rules').available,
+    i18nKey: 'rules',
   },
   {
     id: 'schedule',
     name: '重要時程',
     path: `${ROUTE_PATHS.RULES}${ROUTE_PATHS.SCHEDULE}`,
-    available: tm('schedule').available,
+    i18nKey: 'schedule',
   },
   {
     id: 'judge',
     name: '本屆評審',
     path: `${ROUTE_PATHS.RULES}/judge`,
-    available: tm('rules.judges').available,
+    i18nKey: 'rules.judges',
   },
   {
     id: 'faq',
     name: 'FAQ',
     path: `${ROUTE_PATHS.RULES}/faq`,
-    available: true,
+    i18nKey: null,
   },
 ];
+
+const tabList = tabListConfig.map(tab => ({
+  ...tab,
+  available: tab.i18nKey ? computed(() => tm(tab.i18nKey).available) : computed(() => true),
+}));
 
 const activeTab = computed(() => tabList.find(tab => tab.path === route.path) || tabList[0]);
 
@@ -78,7 +84,7 @@ onMounted(() => {
                 <div class="relative flex flex-col">
                   <template v-for="(tab, index) in tabList" :key="tab.id">
                     <NuxtLink
-                      v-if="tab.available"
+                      v-if="tab.available.value"
                       v-kb-focus="{
                         id: `rules-tab-1-${(index + 2) * 10}`,
                         x: 1,
@@ -105,7 +111,7 @@ onMounted(() => {
               <nav class="flex space-x-3" aria-label="Tabs">
                 <template v-for="(tab, index) in tabList" :key="tab.id">
                   <NuxtLink
-                    v-if="tab.available"
+                    v-if="tab.available.value"
                     ref="tabItems"
                     :to="tab.path"
                     class="mobile-tab-item"
