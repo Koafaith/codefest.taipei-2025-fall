@@ -251,12 +251,12 @@ const newsKeyword = ref('');
             <img
               src="@/assets/images/hero-banner-title.svg"
               class="mx-auto"
-              alt="城市儀表板大黑克松"
+              alt="城市儀表板大黑客松"
             />
             <!-- <p class="text-7xl">
               城市儀表板
               <br />
-              大黑克松
+              大黑客松
             </p> -->
             <!-- <p
               v-for="item in bannerContentList"
@@ -483,7 +483,7 @@ const newsKeyword = ref('');
                     src="@/assets/images/img-rules.jpg"
                     class="absolute top-[12%] left-[12%] right-0 lg:block hidden"
                     :style="{ width: 'calc(100% - 12%)' }"
-                    alt="程式儀表板大黑克松宣傳圖"
+                    alt="程式儀表板大黑客松宣傳圖"
                   />
                   <!-- mobile 背景圖 -->
                   <img
@@ -496,7 +496,7 @@ const newsKeyword = ref('');
                     src="@/assets/images/img-rules-mobile.jpg"
                     class="absolute top-[10%] left-[16%] lg:hidden block"
                     :style="{ width: 'calc(100% - 16%)' }"
-                    alt="程式儀表板大黑克松宣傳圖"
+                    alt="程式儀表板大黑客松宣傳圖"
                   />
                   <!-- desktop noise1 -->
                   <img
