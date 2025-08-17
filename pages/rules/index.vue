@@ -23,7 +23,7 @@ const prospectusContents = computed(() => {
           src="@/assets/images/img-rules.jpg"
           class="absolute top-[12%] left-[12%] right-0 lg:block hidden"
           :style="{ width: 'calc(100% - 12%)' }"
-          alt="程式儀表板大黑克松宣傳圖"
+          alt="程式儀表板大黑客松宣傳圖"
         />
         <!-- mobile 背景圖 -->
         <img
@@ -36,7 +36,7 @@ const prospectusContents = computed(() => {
           src="@/assets/images/img-rules-mobile.jpg"
           class="absolute top-[10%] left-[16%] lg:hidden block"
           :style="{ width: 'calc(100% - 16%)' }"
-          alt="程式儀表板大黑克松宣傳圖"
+          alt="程式儀表板大黑客松宣傳圖"
         />
       </div>
     </div>
