@@ -1,3 +1,4 @@
+ts
 <script setup lang="ts">
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
 import type { JudgeList } from '~/interfaces/judge.interface';
@@ -10,10 +11,7 @@ const { tm } = useI18n();
 const runtimeConfig = useRuntimeConfig();
 
 /** 評審列表 */
-const judgeList = computed<JudgeList[]>(() => {
-  const data = tm('rules.judges').list;
-  return Array.isArray(data) ? data : Object.values(data); // 轉換 Object 為 Array
-});
+const judgeList = computed<JudgeList[]>(() => tm('rules.judges').list as JudgeList[]);
 </script>
 
 <template>
