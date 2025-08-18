@@ -1,4 +1,7 @@
+ts
 <script setup lang="ts">
+import { computed, defineProps, onMounted, onUnmounted, ref, withDefaults } from 'vue';
+
 const props = withDefaults(
   defineProps<{
     direction?: 'left' | 'right';
@@ -23,6 +26,15 @@ onMounted(() => {
 onUnmounted(() => {
   clearInterval(intervalId);
 });
+
+const desktopImageSrc = computed(() => {
+  return currentImage.value === 0 ? '/images/section-decoration.svg' : '/images/section-decoration-2.svg';
+});
+
+const mobileImageSrc = computed(() => {
+  return currentImage.value === 0 ? '/images/section-decoration-mobile.svg' : '/images/section-decoration-mobile-2.svg';
+});
+
 </script>
 
 <template>
@@ -32,30 +44,14 @@ onUnmounted(() => {
   >
     <!-- desktop -->
     <img
-      v-show="currentImage === 0"
-      src="/images/section-decoration.svg"
-      class="lg:block hidden w-[750px]"
-      :class="props.direction === 'right' ? 'transform scale-x-[-1]' : ''"
-      alt=""
-    />
-    <img
-      v-show="currentImage === 1"
-      src="/images/section-decoration-2.svg"
+      :src="desktopImageSrc"
       class="lg:block hidden w-[750px]"
       :class="props.direction === 'right' ? 'transform scale-x-[-1]' : ''"
       alt=""
     />
     <!-- mobile -->
     <img
-      v-show="currentImage === 0"
-      src="/images/section-decoration-mobile.svg"
-      class="lg:hidden block"
-      :class="props.direction === 'right' ? 'transform scale-x-[-1]' : ''"
-      alt=""
-    />
-    <img
-      v-show="currentImage === 1"
-      src="/images/section-decoration-mobile-2.svg"
+      :src="mobileImageSrc"
       class="lg:hidden block"
       :class="props.direction === 'right' ? 'transform scale-x-[-1]' : ''"
       alt=""
