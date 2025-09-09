@@ -19,12 +19,10 @@ const props = defineProps<{
 const emit = defineEmits(['close']);
 
 const thumbsSwiper = ref<Swiper | null>(null);
-const swiperReady = ref(false);
 
 const setThumbsSwiper = (swiper: Swiper) => {
   try {
     thumbsSwiper.value = swiper;
-    swiperReady.value = true;
   } catch (error) {
     console.error('Error initializing thumbs swiper:', error);
   }
@@ -36,7 +34,6 @@ watch(
   newValue => {
     if (!newValue) {
       thumbsSwiper.value = null;
-      swiperReady.value = false;
     }
   }
 );
@@ -82,7 +79,7 @@ watch(
                       prevEl: '.team-swiper-button-prev',
                       nextEl: '.team-swiper-button-next',
                     }"
-                    :thumbs="swiperReady ? { swiper: thumbsSwiper } : undefined"
+                    :thumbs="{ swiper: thumbsSwiper }"
                     :modules="[FreeMode, Navigation, Thumbs]"
                     class="mb-4"
                   >
