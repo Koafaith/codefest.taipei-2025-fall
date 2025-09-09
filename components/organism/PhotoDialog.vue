@@ -1,3 +1,4 @@
+ts
 <script setup lang="ts">
 import { Dialog, DialogPanel, DialogTitle, DialogDescription } from '@headlessui/vue';
 import type { PastPhoto } from '~/interfaces/past.interface';
@@ -38,10 +39,9 @@ const setMainSwiper = (swiper: Swiper) => {
 // Reset swiper state when dialog closes
 watch(
   () => props.isOpen,
-  newValue => {
+  (newValue) => {
     if (!newValue) {
       thumbsSwiper.value = null;
-      swiperReady.value = false;
     }
   }
 );
