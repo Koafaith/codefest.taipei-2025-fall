@@ -20,13 +20,11 @@ const props = defineProps<{
 const emit = defineEmits(['close']);
 
 const thumbsSwiper = ref<Swiper | null>(null);
-const swiperReady = ref(false);
 const mainSwiper = ref<Swiper | null>(null);
 
 const setThumbsSwiper = (swiper: Swiper) => {
   try {
     thumbsSwiper.value = swiper;
-    swiperReady.value = true;
   } catch (error) {
     console.error('Error initializing thumbs swiper:', error);
   }
