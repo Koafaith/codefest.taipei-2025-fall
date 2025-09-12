@@ -28,13 +28,16 @@ onUnmounted(() => {
 });
 
 const desktopImageSrc = computed(() => {
-  return currentImage.value === 0 ? '/images/section-decoration.svg' : '/images/section-decoration-2.svg';
+  return currentImage.value === 0
+    ? 'images/section-decoration.svg'
+    : 'images/section-decoration-2.svg';
 });
 
 const mobileImageSrc = computed(() => {
-  return currentImage.value === 0 ? '/images/section-decoration-mobile.svg' : '/images/section-decoration-mobile-2.svg';
+  return currentImage.value === 0
+    ? 'images/section-decoration-mobile.svg'
+    : 'images/section-decoration-mobile-2.svg';
 });
-
 </script>
 
 <template>
