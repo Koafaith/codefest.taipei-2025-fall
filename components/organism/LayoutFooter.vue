@@ -18,7 +18,6 @@ const contactBtns = computed(() => {
               <span class="col-span-2 lg:col-span-1 text-center lg:text-left mb-4"
                 >主辦單位<span class="lg:inline hidden">：</span></span
               >
-              <span class="text-center lg:text-left lg:mb-4">新北市政府資訊中心</span>
               <span class="text-center lg:text-left lg:mb-4">臺北市政府資訊局</span>
             </div>
             <div v-if="tm('policy').available" class="lg:block hidden mt-auto text-center">

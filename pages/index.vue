@@ -39,7 +39,7 @@ const scheduleList = computed(() => {
   return Array.isArray(data) ? data : Object.values(data); // 轉換 Object 為 Array
 });
 /** 選中的重要時程 */
-const activeSchedule = ref(scheduleList.value[2]);
+const activeSchedule = ref(scheduleList.value[0]);
 
 /** 最新消息列表 */
 const newsList = computed<News[]>(() => {
@@ -258,7 +258,7 @@ const newsKeyword = ref('');
               <br />
               大黑客松
             </p> -->
-            <!-- <p
+            <p
               v-for="item in bannerContentList"
               :key="item.label"
               class="lg:flex items-center font-fusion-pixel"
@@ -267,8 +267,8 @@ const newsKeyword = ref('');
                 item.label
               }}</span>
               <span class="lg:text-4xl text-2xl lg:inline block">{{ item.value }}</span>
-            </p> -->
-            <!-- <div class="flex justify-center">
+            </p>
+            <div class="flex justify-center">
               <AtomButton
                 v-kb-focus="{ id: 'index-button-1-2', x: 1, y: 2 }"
                 class="min-w-60"
@@ -279,183 +279,14 @@ const newsKeyword = ref('');
               >
                 {{ isRegistrationClosed ? '報名截止' : '立即報名' }}
               </AtomButton>
-            </div> -->
+            </div>
           </div>
         </div>
       </div>
     </section>
     <AtomSectionDecoration class="lg:block hidden" />
     <AtomSectionDecoration class="lg:hidden" />
-    <!-- 第2幀 - 參賽回顧 -->
-    <template v-if="tm('past').available">
-      <div class="lg:flex justify-start hidden">
-        <MoleculeSectionNav active-nav-name="past" :focus-y="30" />
-      </div>
-      <section id="past" class="2xl:p-0 p-5">
-        <div class="border border-white relative">
-          <div class="m-1 border border-white">
-            <p class="section-title font-fusion-pixel">參賽回顧</p>
-            <div class="lg:p-10 p-6 border border-b-white">
-              <!-- 影片列表 -->
-              <!-- pc swiper -->
-              <div class="hidden lg:block">
-                <Swiper
-                  :modules="[Navigation, Pagination]"
-                  :slides-per-view="3"
-                  :slides-per-group="3"
-                  :space-between="20"
-                  :loop="false"
-                  :direction="'horizontal'"
-                  :navigation="{
-                    nextEl: '.past-swiper-button-next', // 下一則
-                    prevEl: '.past-swiper-button-prev', // 上一則
-                  }"
-                  @slide-change="onPastSlideChange"
-                >
-                  <SwiperSlide v-for="(group, index) in winningTeamList" :key="index">
-                    <div :key="group.id">
-                      <a
-                        v-kb-focus="{
-                          id: `index-video-${index + 1}-31`,
-                          x: index + 1,
-                          y: 31,
-                        }"
-                        href="javascript:void(0)"
-                        class="m-1 inline-block"
-                        @click="
-                          activeWinningTeam = group;
-                          dialogStore.openDialog('winningTeam');
-                        "
-                      >
-                        <div class="video-box relative">
-                          <img
-                            :src="group.thumbnail"
-                            class="w-full h-full object-cover transition-all duration-300 group-hover:brightness-75"
-                            alt=""
-                          />
-                          <!-- 播放按鈕 -->
-                          <!-- <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                            <img src="@/assets/images/icons/play.png" width="40" alt="play_btn" />
-                          </div> -->
-                        </div>
-                        <div class="flex justify-between items-center mt-2 text-lg text-white">
-                          <span>{{ group.ranking }} | {{ group.team_name }}</span>
-                          <span>
-                            <img
-                              src="@/assets/images/icons/white-right-arrow.svg"
-                              width="24"
-                              alt=""
-                            />
-                          </span>
-                        </div>
-                      </a>
-                    </div>
-                  </SwiperSlide>
-                </Swiper>
-              </div>
-              <!-- mobile -->
-              <div class="lg:hidden block">
-                <div
-                  v-for="(group, index) in winningTeamList.slice(0, 3)"
-                  :key="index"
-                  class="mb-8"
-                >
-                  <a
-                    href="javascript:void(0)"
-                    @click="
-                      activeWinningTeam = group;
-                      dialogStore.openDialog('winningTeam');
-                    "
-                  >
-                    <div class="video-box relative">
-                      <img
-                        :src="group.thumbnail"
-                        class="w-full h-full object-cover transition-all duration-300 group-hover:brightness-75"
-                        alt=""
-                      />
-                      <!-- 播放按鈕 -->
-                      <!-- <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                        <div
-                          class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-[0_0_6px]"
-                        >
-                          <span class="text-black text-4xl font-bold">▶</span>
-                        </div>
-                      </div> -->
-                    </div>
-                    <div class="flex justify-between items-center mt-2 text-lg text-white">
-                      <span>{{ group.ranking }} | {{ group.team_name }}</span>
-                      <span>→</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div v-if="pastTotalPages > 1" class="hidden lg:block py-4 px-10 border border-b-white">
-              <!-- 分頁控制 -->
-              <div class="flex justify-end items-center space-x-2 text-white font-px437">
-                <button
-                  v-kb-focus="{
-                    id: `index-video-1-32`,
-                    x: 1,
-                    y: 32,
-                  }"
-                  class="past-swiper-button-prev"
-                >
-                  <img
-                    src="@/assets/images/icons/white-down-arrow.svg"
-                    alt="arrow"
-                    width="14"
-                    class="rotate-90"
-                  />
-                </button>
-                <span>&nbsp;{{ pastCurrentPage }} / {{ pastTotalPages }}&nbsp;</span>
-                <button
-                  v-kb-focus="{
-                    id: `index-video-2-32`,
-                    x: 2,
-                    y: 32,
-                  }"
-                  class="past-swiper-button-next"
-                >
-                  <img
-                    src="@/assets/images/icons/white-down-arrow.svg"
-                    alt="arrow"
-                    width="14"
-                    class="-rotate-90"
-                  />
-                </button>
-              </div>
-            </div>
-            <div class="flex justify-between items-center p-10 bg-primary-300 m-1">
-              <!-- 文字區塊 (lg 以上才顯示) -->
-              <div class="hidden lg:block flex-1">
-                <p class="font-px437 text-white typing-container">READ MORE COMPETITIONS：VIEW⭢</p>
-              </div>
-
-              <!-- 按鈕區塊 -->
-              <div
-                class="w-full lg:w-auto flex flex-nowrap justify-center lg:justify-end space-x-8"
-              >
-                <AtomButton
-                  v-kb-focus="{
-                    id: `index-video-1-33`,
-                    x: 1,
-                    y: 33,
-                  }"
-                  :to="ROUTE_PATHS.PAST"
-                  :icon-type="'arrow'"
-                  class="min-w-60"
-                >
-                  查看更多
-                </AtomButton>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <AtomSectionDecoration />
-    </template>
-    <!-- 第3幀 - 競賽規則 -->
+    <!-- 第2幀 - 競賽規則 -->
     <template v-if="tm('rules').available">
       <div class="lg:flex justify-end hidden">
         <MoleculeSectionNav active-nav-name="rules" :focus-y="3" />
@@ -677,7 +508,7 @@ const newsKeyword = ref('');
       </section>
       <AtomSectionDecoration direction="right" />
     </template>
-    <!-- 第4幀 - 重要時程 -->
+    <!-- 第3幀 - 重要時程 -->
     <template v-if="tm('schedule').available">
       <div class="lg:flex justify-start hidden">
         <MoleculeSectionNav active-nav-name="schedule" :focus-y="8" />
@@ -927,7 +758,7 @@ const newsKeyword = ref('');
       </section>
       <AtomSectionDecoration />
     </template>
-    <!-- 第5幀 - 最新消息 -->
+    <!-- 第4幀 - 最新消息 -->
     <template v-if="tm('news').available">
       <div class="lg:flex justify-end hidden">
         <MoleculeSectionNav active-nav-name="news" :focus-y="20" />
@@ -1041,6 +872,175 @@ const newsKeyword = ref('');
               src="@/assets/images/news-noise2.svg"
               alt="noise"
             />
+          </div>
+        </div>
+      </section>
+      <AtomSectionDecoration direction="right" />
+    </template>
+    <!-- 第5幀 - 參賽回顧 -->
+    <template v-if="tm('past').available">
+      <div class="lg:flex justify-start hidden">
+        <MoleculeSectionNav active-nav-name="past" :focus-y="30" />
+      </div>
+      <section id="past" class="2xl:p-0 p-5">
+        <div class="border border-white relative">
+          <div class="m-1 border border-white">
+            <p class="section-title font-fusion-pixel">參賽回顧</p>
+            <div class="lg:p-10 p-6 border border-b-white">
+              <!-- 影片列表 -->
+              <!-- pc swiper -->
+              <div class="hidden lg:block">
+                <Swiper
+                  :modules="[Navigation, Pagination]"
+                  :slides-per-view="3"
+                  :slides-per-group="3"
+                  :space-between="20"
+                  :loop="false"
+                  :direction="'horizontal'"
+                  :navigation="{
+                    nextEl: '.past-swiper-button-next', // 下一則
+                    prevEl: '.past-swiper-button-prev', // 上一則
+                  }"
+                  @slide-change="onPastSlideChange"
+                >
+                  <SwiperSlide v-for="(group, index) in winningTeamList" :key="index">
+                    <div :key="group.id">
+                      <a
+                        v-kb-focus="{
+                          id: `index-video-${index + 1}-31`,
+                          x: index + 1,
+                          y: 31,
+                        }"
+                        href="javascript:void(0)"
+                        class="m-1 inline-block"
+                        @click="
+                          activeWinningTeam = group;
+                          dialogStore.openDialog('winningTeam');
+                        "
+                      >
+                        <div class="video-box relative">
+                          <img
+                            :src="group.thumbnail"
+                            class="w-full h-full object-cover transition-all duration-300 group-hover:brightness-75"
+                            alt=""
+                          />
+                          <!-- 播放按鈕 -->
+                          <!-- <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                            <img src="@/assets/images/icons/play.png" width="40" alt="play_btn" />
+                          </div> -->
+                        </div>
+                        <div class="flex justify-between items-center mt-2 text-lg text-white">
+                          <span>{{ group.ranking }} | {{ group.team_name }}</span>
+                          <span>
+                            <img
+                              src="@/assets/images/icons/white-right-arrow.svg"
+                              width="24"
+                              alt=""
+                            />
+                          </span>
+                        </div>
+                      </a>
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+              <!-- mobile -->
+              <div class="lg:hidden block">
+                <div
+                  v-for="(group, index) in winningTeamList.slice(0, 3)"
+                  :key="index"
+                  class="mb-8"
+                >
+                  <a
+                    href="javascript:void(0)"
+                    @click="
+                      activeWinningTeam = group;
+                      dialogStore.openDialog('winningTeam');
+                    "
+                  >
+                    <div class="video-box relative">
+                      <img
+                        :src="group.thumbnail"
+                        class="w-full h-full object-cover transition-all duration-300 group-hover:brightness-75"
+                        alt=""
+                      />
+                      <!-- 播放按鈕 -->
+                      <!-- <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <div
+                          class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-[0_0_6px]"
+                        >
+                          <span class="text-black text-4xl font-bold">▶</span>
+                        </div>
+                      </div> -->
+                    </div>
+                    <div class="flex justify-between items-center mt-2 text-lg text-white">
+                      <span>{{ group.ranking }} | {{ group.team_name }}</span>
+                      <span>→</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div v-if="pastTotalPages > 1" class="hidden lg:block py-4 px-10 border border-b-white">
+              <!-- 分頁控制 -->
+              <div class="flex justify-end items-center space-x-2 text-white font-px437">
+                <button
+                  v-kb-focus="{
+                    id: `index-video-1-32`,
+                    x: 1,
+                    y: 32,
+                  }"
+                  class="past-swiper-button-prev"
+                >
+                  <img
+                    src="@/assets/images/icons/white-down-arrow.svg"
+                    alt="arrow"
+                    width="14"
+                    class="rotate-90"
+                  />
+                </button>
+                <span>&nbsp;{{ pastCurrentPage }} / {{ pastTotalPages }}&nbsp;</span>
+                <button
+                  v-kb-focus="{
+                    id: `index-video-2-32`,
+                    x: 2,
+                    y: 32,
+                  }"
+                  class="past-swiper-button-next"
+                >
+                  <img
+                    src="@/assets/images/icons/white-down-arrow.svg"
+                    alt="arrow"
+                    width="14"
+                    class="-rotate-90"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="flex justify-between items-center p-10 bg-primary-300 m-1">
+              <!-- 文字區塊 (lg 以上才顯示) -->
+              <div class="hidden lg:block flex-1">
+                <p class="font-px437 text-white typing-container">READ MORE COMPETITIONS：VIEW⭢</p>
+              </div>
+
+              <!-- 按鈕區塊 -->
+              <div
+                class="w-full lg:w-auto flex flex-nowrap justify-center lg:justify-end space-x-8"
+              >
+                <AtomButton
+                  v-kb-focus="{
+                    id: `index-video-1-33`,
+                    x: 1,
+                    y: 33,
+                  }"
+                  :to="ROUTE_PATHS.PAST"
+                  :icon-type="'arrow'"
+                  class="min-w-60"
+                >
+                  查看更多
+                </AtomButton>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -15,7 +15,6 @@ const { activeDialog } = storeToRefs(dialogStore);
           class="px-4 flex space-x-2"
           tabindex="0"
         >
-          <img src="/images/logos/logo-icon-ntpc.svg" class="lg:w-[40px] w-[30px]" alt="" />
           <img src="/images/logos/logo-icon-tpe.svg" class="lg:w-[40px] w-[30px]" alt="" />
         </NuxtLink>
         <!-- web -->
