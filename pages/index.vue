@@ -248,11 +248,16 @@ const newsKeyword = ref('');
             <p class="lg:text-2xl text-xl font-fusion-pixel text-are-you-ready mt-6">
               {{ tm('hero_banner.section_title') }}
             </p>
-            <img
+            <!-- <img
               src="@/assets/images/hero-banner-title.svg"
               class="mx-auto"
-              alt="城市儀表板大黑客松"
-            />
+              alt="城市通微服務大黑客松"
+            /> -->
+            <p
+              class="mb-4 md:text-[4rem] text-[2.5rem] font-fusion-pixel text-center whitespace-pre-wrap md:leading-[5rem] leading-[3rem]"
+            >
+              {{ tm('hero_banner.title') }}
+            </p>
             <!-- <p class="text-7xl">
               城市儀表板
               <br />

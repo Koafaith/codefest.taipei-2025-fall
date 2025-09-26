@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/2025-fall/',
     head: {
-      title: '2025雙北程式設計節',
+      title: '2025臺北秋季程式設計節',
       meta: [
         { name: 'robots', content: 'index,follow' },
         { 'http-equiv': 'cache-control', content: 'no-cache' },

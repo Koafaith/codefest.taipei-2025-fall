@@ -60,7 +60,7 @@ const navItemClass = computed(() => {
           >FAQ</NuxtLink
         >
       </li>
-      <li :class="navItemClass">
+      <!-- <li :class="navItemClass">
         <NuxtLink
           v-kb-focus="{
             id: `${type}-nav5-${type === 'header' ? 1 : 202}`,
@@ -71,7 +71,7 @@ const navItemClass = computed(() => {
           @click="dialogStore.closeDialog()"
           >參賽回顧</NuxtLink
         >
-      </li>
+      </li> -->
       <li :class="navItemClass">
         <a
           v-kb-focus="{

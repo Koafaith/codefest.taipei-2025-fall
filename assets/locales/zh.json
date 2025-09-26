@@ -1,10 +1,11 @@
 {
     "hero_banner": {
         "section_title": "2025臺北秋季程式設計節",
+        "title": "城市通微服務\n大黑客松",
         "content": [
             {
                 "label": "競賽日",
-                "value": "11/8 Sat - 11/9 Sun"
+                "value": "11/08 Sat - 11/09 Sun"
             }
         ]
     },
@@ -138,7 +139,7 @@
                     "sub_content": "為確保所有競賽參賽者能夠在最佳環境下備賽，請務必詳閱以下空間使用說明，並請配合遵守場地使用規範：\n\n一、空間資訊與開放時間\n地點：台北市電腦商業同業公會B1F及5F指定空間\n（台北市松山區八德路三段2號）\n使用期間：10月27日(一)10:00 至 11月5日(三)\n開放時間：每天三個時段 上午10:00-12:00、下午13:00-15:00、下午15:00-17:00\n預約方式：填寫預約表單，相同時段若借用隊伍數量超出場地容納空間則依填表順序依序安排\n聯絡方式：\n電話：02-2577-4249 #327張先生、#522 葉小姐\nE-mail：<a href='mailto:codefesttaipei@gov.taipei' target='_blank' rel='noopener noreferrer' style='text-decoration: underline; color: #58FEFF;'>codefesttaipei@gov.taipei</a>\n\n二、進出管理\n請於預約時間當天來電本會服務同仁協助接待。\n\n三、空間使用須知\n設備與資源：提供桌椅、電源、咖啡，請妥善使用。\n維持整潔：請勿隨意移動設備，並於使用後收拾個人物品及垃圾。\n節約能源：若長時間不使用電源設備，請關閉電源。\n安排順序：若達每日使用人數上限，將依現場預約順序提供座位。\n\n四、行為規範\n保持安靜：請尊重他人，避免喧嘩或大聲交談。\n禁止佔位：如需暫時離開超過30分鐘，請帶走個人物品。\n禁止外來訪客：僅限報名選手使用，非報名人員不得進入。\n\n五、違規處理\n若有違反規範行為，將視情節輕重，給予警告或取消空間使用權限。"
                 }
             ],
-            "download_url": "https://drive.google.com/file/d/1ZzoYogYFYmPZcqOXzj5p3bPiMldyTshd/view"
+            "download_url": "https://drive.google.com/file/d/1NOO7O13H6als_WwrqXiDKXgKX-wN--cD/view"
         }
     },
     "schedule": {
@@ -356,69 +357,6 @@
         "section_title": "最新消息",
         "list": [
             {
-                "id": 7,
-                "date": "2025.05.19",
-                "title": "📢 【2025雙北程式設計節－城市儀表板大黑客松】晉級團隊名單公布！",
-                "image_url": "",
-                "content": "2025雙北程式設計節－城市儀表板大黑客松工作坊已於本週日順利完成，經過工作坊面談後，最終晉級的參賽團隊名單請見附件。在此恭喜所有晉級團隊，期待與你們在決賽現場見面！<img src='images/news/news-7-1.jpg' alt='晉級團隊名單1'><br><br><img src='images/news/news-7-2.jpg' alt='晉級團隊名單2'><br><br>",
-                "available": true,
-                "tag": "news"
-            },
-            {
-                "id": 6,
-                "date": "2025.05.08",
-                "title": "入圍工作坊名單出爐了！",
-                "image_url": "",
-                "content": "<img src='images/news/news-6-1.png' alt='名單1'><br><br><img src='images/news/news-6-2.png' alt='名單2'><br><br><img src='images/news/news-6-3.png' alt='名單3'>",
-                "available": true,
-                "tag": "news"
-            },
-            {
-                "id": 5,
-                "date": "2025.05.08",
-                "title": "🔔【最新消息】AI 使用規範正式說明",
-                "image_url": "",
-                "content": "本次競賽是否可使用 AI？<br>✅ 可以！因AI已是趨勢，各團隊可自由規劃導入AI協助開發。<br>✅ 團隊應具備維護修改作品原始碼之軟體工程能力，不宜以全 Vibe Coding 方式進行開發，如最終因團隊未能依主辦單位要求，將得獎作品指定元素完成官方整併，將喪失領獎資格。<br>✅ 作品之元件、函式庫、工具與流程均需符合競賽授權規範，且強烈不建議作品常態性串接包含但不限於佈署大型語言模型之第三方運算資源，如因此導致官方整併困難，亦將間接導致領獎資格喪失。",
-                "available": true,
-                "tag": "news"
-            },
-            {
-                "id": 999,
-                "date": "2025.04.21",
-                "title": "✨競賽說明會重播上線！掌握關鍵資訊不漏接",
-                "image_url": "",
-                "content": "《2025雙北程式設計節》說明會重播影片已公開，<br>立即前往 YouTube 頻道重溫精彩內容 🎬👇<br>👉 <a href='https: //scedux.com/0tpW' target='_blank' rel='noopener noreferrer' style='text-decoration: underline; color: #0000EE;'>https://scedux.com/0tpW</a><br><br>這場說明會內容濃縮、資訊豐富，重點一次掌握 ☕<br>📌 競賽規則與評分方式<br>📌 臺北城市儀表板使用技術說明<br><br>不論你是剛認識活動的新朋友，<br>還是想確認細節的高手，這支影片都值得一看！💯<br>現在就邀請更多夥伴一同加入，<br>把城市資料玩出新創意 🚀🌆<br><br>⚠️ 報名只到 4/30（三）！<br>尚未完成報名的隊伍請把握最後機會，手刀揪隊報名 ✨💻",
-                "available": true,
-                "tag": "media"
-            },
-            {
-                "id": 4,
-                "date": "2025.04.17",
-                "title": "✨2025雙北黑客松✨ 線上說明會影片已經上架啦～",
-                "image_url": "",
-                "content": "📣【競賽說明會沒跟上？別擔心！】<br>立刻到 《雙北程式設計節》YouTube 頻道 重溫精彩內容 🎬👇<br>👉 <a href='https://scedux.com/0tpW' target='_blank' rel='noopener noreferrer' style='text-decoration: underline; color: #0000EE;'>https://scedux.com/0tpW</a><br><br>這場說明會重點超濃縮！☕ 全都幫你整理好了～<br>📌 競賽規則<br>📌 臺北城市儀表板使用技術說明<br><br>不管你是剛知道活動的新朋友，還是想再確認細節的高手，這支影片都超實用！💯<br>現在，也邀請更多夥伴一起加入我們，把城市的資料玩出新創意🚀🌆<br><br>⚠️ 報名只到 4/30(三) ！<br>還沒報名的朋友現在就是時候把握機會，揪隊手刀報起來 ✨💻",
-                "available": true,
-                "tag": "news"
-            },
-            {
-                "id": 3,
-                "date": "2025.04.01",
-                "title": "📢 Knock Knock！4/7 黑客松官方線上說明會等你來！ 🚀",
-                "image_url": "images/news/news-1.jpg",
-                "content": "🎉🎉 期待已久的官方說明會來啦！🎉🎉<br>想在「2025 雙北程式設計節-城市儀表板大黑客松」大展身手？這場說明會就是你的必勝攻略！我們將詳細解說競賽規則、技術要求、評選方式，還有超實用的獲獎團隊分享，重點是還能直接發問，讓你比賽時無往不利！<br><br><strong>📅 活動資訊</strong><br>📍 時間：4/7（週一）17:00 開始（16:30 可上線報到）<br>📍 地點：線上視訊（報名成功後將寄送會議連結）<br>📍 報名連結：<a href='https://scedux.com/vxWr' target='_blank' rel='noopener noreferrer' style='text-decoration: underline; color: #0000EE;'>https://scedux.com/vxWr</a><br><br><strong>🔥 說明會重點搶先看！</strong><br>✅ 競賽介紹：快速了解比賽背景與「臺北城市儀表板」平台<br>✅ 報名&評選方式：深入解析競賽機制，掌握評審關注關鍵<br>✅ 技術指南：重點解析資料應用提供團隊最佳開發策略<br>✅ 現場 Q&A：開放提問，解決你對競賽與技術的所有疑問！<br><br>💡場次有限，錯過就要敲碗啦！🔥<br>這不只是說明會，更是你在黑客松勝出的關鍵佈局！ 想搶佔先機，拿下獎金與榮耀？現在就報名，4/7 線上見！ 👏👏<br>#官方線上說明會 #臺北市政府資訊局 #新北市政府資訊中心 #黑客松 #高額獎金 #超強技術挑戰 #贏在起跑點",
-                "available": true,
-                "tag": "news"
-            },
-            {
-                "id": 2,
-                "date": "2025.03.31",
-                "title": "政風宣導｜2025雙北程式設計節-城市儀表板大黑客松",
-                "image_url": "",
-                "content": "為了促進政府營運資訊的公平分配，避免系統廠商壟斷知識資源或技術之風險，使得政府經營的不效率。本局戮力促成知識資訊的自由流通和共享邁進，來降低政府採購資訊不平等和創新障礙，以符合資訊倫理。\n\n以過往臺北城市儀表板 2.0 作為先鋒，現正推行至城市通，開源程式碼專案(也意即政府開放智慧財產權)，主要目的在鼓勵所有有興趣的各方參與平台的開發，達成合作創新模式，朝共創共益邁進。同時，透過程式設計節建立合理的獎金激勵機制，來鼓勵知識分享者和創新者參與共享促進政府部門的進步。",
-                "available": true,
-                "tag": "news"
-            },
-            {
                 "id": 1,
                 "date": "2025.03.31",
                 "title": "📢 最新消息｜2025 雙北程式設計節-城市儀表板大黑客松正式開跑！",
@@ -430,7 +368,7 @@
         ]
     },
     "past": {
-        "available": true,
+        "available": false,
         "section_title": "參賽回顧",
         "description": "收錄獲獎團隊及影音回顧",
         "winning_teams": {
@@ -848,7 +786,7 @@
         "buttons": [
             {
                 "name": "Github",
-                "link": "https://github.com/taipei-doit/Taipei-City-Dashboard"
+                "link": "https://github.com/taipei-doit/TownPass"
             },
             {
                 "name": "YouTube",
