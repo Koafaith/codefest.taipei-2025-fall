@@ -10,7 +10,7 @@ const prospectusContents = computed(() => {
 
 <template>
   <div>
-    <div class="lg:p-10 p-4 border-b border-white">
+    <div class="lg:p-10 lg:pb-32 p-4 border-b border-white">
       <div class="relative lg:mb-0 mb-12">
         <!-- desktop 背景圖 -->
         <img
@@ -20,10 +20,10 @@ const prospectusContents = computed(() => {
         />
         <!-- desktop image -->
         <img
-          src="@/assets/images/img-rules.jpg"
+          src="@/assets/images/img-rules.svg"
           class="absolute top-[12%] left-[12%] right-0 lg:block hidden"
           :style="{ width: 'calc(100% - 12%)' }"
-          alt="程式儀表板大黑客松宣傳圖"
+          alt="程式通微服務大黑客松宣傳圖"
         />
         <!-- mobile 背景圖 -->
         <img
@@ -33,10 +33,10 @@ const prospectusContents = computed(() => {
         />
         <!-- mobile image -->
         <img
-          src="@/assets/images/img-rules-mobile.jpg"
+          src="@/assets/images/img-rules-mobile.svg"
           class="absolute top-[10%] left-[16%] lg:hidden block"
           :style="{ width: 'calc(100% - 16%)' }"
-          alt="程式儀表板大黑客松宣傳圖"
+          alt="程式通微服務大黑客松宣傳圖"
         />
       </div>
     </div>

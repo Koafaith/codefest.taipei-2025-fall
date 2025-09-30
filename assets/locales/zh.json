@@ -4,8 +4,8 @@
         "title": "城市通微服務\n大黑客松",
         "content": [
             {
-                "label": "競賽日",
-                "value": "11/08 Sat - 11/09 Sun"
+                "label": "報名期間",
+                "value": "10/01 Wed - 10/20 Mon"
             }
         ]
     },
@@ -108,23 +108,23 @@
                 },
                 {
                     "sub_title": "<參、參賽方式>",
-                    "sub_content": "一、參賽資格\n(一)、本競賽以隊伍為單位報名參賽，隊伍成員數量至少4人至多5人，每人限報名1隊，隊伍中需由2人擔任主要及次要聯絡人。\n(二)、本競賽對於參賽者的年齡、身份與國籍原則上不設限。惟報名時尚未年滿18歲者，須經法定代理人書面同意。\n(三)、參賽隊伍建議應具備以下核心技能：\n1.開發工具：Git、Docker、Postman。\n2. 前端技術能力：HTML、CSS、JavaScript、Vue、其他 package.json 工具。\n3.後端技術能力(Java)：Spring Framework、Hibernate、Tomcat。\n4.Flutter開發：Flutter、Dart、狀態管理、Flutter Widgets、網路通信。\n5.市政知識：了解市政運營，設計應用。\n(四)、參賽隊伍編制建議包含但不限於以下角色：\n1.專案規劃師：說明文字撰寫、應用場景規劃、主題規劃\n2.資料工程師：資料彙整、資料源串接、系統架構\n3.前端工程師：前端畫面開發、前後端API串接\n4.後端工程師：API 開發、後端與資料庫串接\n\n二、報名方式\n(一)、所有報名均應透過本競賽官網完成，連結：<a href='https://codefest.taipei/2025-fall/' target='_blank' style='text-decoration: underline; color: #58FEFF;' rel='noopener noreferrer'>https://codefest.taipei/</a>\n(二)、本競賽參賽隊伍以40隊或200人為原則；主辦單位將依據參賽者能力背景審核參賽資格，並採2階段審核：\n1.第1階段審核（書面審核）：參賽隊伍完成報名後，主辦單位將根據報名資料進行審核。審核錄取及備取結果將於第2階段前於官方網站公告，同時以Email通知隊伍。\n2.第2階段審核（面談審核）：將於工作坊同日舉行，以透過面談方式辦理。審核錄取及備取結果將於競賽活動前於官方網站公告，同時以Email通知隊伍。\n(三)、參賽隊伍應提交完整團隊資料，包括但不限於成員姓名、聯繫方式與簡歷等相關資料。如經主辦單位認定提交資料不完整，主辦單位得退回該隊伍的報名申請；參賽隊伍若仍欲報名，須依主辦單位指示補交完整團隊資料後始完成報名程序。\n(四)、倘不克參賽之團隊，最遲應於10月31日中午12:00前告知主辦單位，以利主辦單位安排候補參賽隊伍。若競賽當日參賽者無故缺席，將影響往後參與主辦單位類似競賽之報名資格。\n(五)、參賽隊伍中若有未年滿18歲者與其法定代理人共同參賽，請於填寫報名表勾選相應選項，並請於備註欄位註明法定代理人姓名（詳報名表單之說明）。\n(六)、主辦單位保留提前及延後結束報名之權利。\n(七)、主辦單位保留遞補候補參賽隊伍，及調整本競賽參賽隊伍數之權利。\n\n三、參賽隊伍須知\n(一)、各隊伍須指派1至2名成員代表實體出席工作坊，其餘隊伍成員得線上出席。參賽隊伍於競賽期間須全體成員實體出席。若參賽隊伍未指派代表參與工作坊，主辦單位將直接取消該參賽隊伍之競賽資格。若參賽隊伍全體成員於競賽期間無正當理由未親自到場報到參與競賽，主辦單位亦有權取消該參賽隊伍之競賽資格。\n(二)、主辦單位將於工作坊及競賽當天對參賽隊伍成員進行身分驗證，驗證方式包括但不限於以身分證、健保卡、駕照、護照或居留證等政府核發之證明文件。\n(三)、參賽隊伍應秉持良善立意，了解競賽規則，盡力完成競賽。\n(四)、參賽隊伍應配合主辦單位的問卷調查與訪問。\n(五)、參賽隊伍自備本競賽相關電腦設備，請自行保管維護，若因人為方式損害，主辦單位保留免責權利。\n(六)、參賽隊伍應公開釋出所有於本競賽開發之成果，詳情請參閱第捌條。"
+                    "sub_content": "一、參賽資格\n(一)、本競賽以隊伍為單位報名參賽，隊伍成員數量至少4人至多5人，每人限報名1隊，隊伍中需由2人擔任主要及次要聯絡人。\n(二)、本競賽對於參賽者的年齡、身份與國籍原則上不設限。惟報名時尚未年滿18歲者，須經法定代理人書面同意。\n(三)、參賽隊伍建議應具備以下核心技能：\n1.開發工具：Git、Docker、Postman。\n2.前端技術能力：HTML、CSS、JavaScript、Vue、其他 package.json 工具。\n3.後端技術能力(Java)：Spring Framework、Hibernate、Tomcat。\n4.Flutter開發：Flutter、Dart、狀態管理、Flutter Widgets、網路通信。\n5.市政知識：了解市政運營，設計應用。\n(四)、參賽隊伍編制建議包含但不限於以下角色：\n1.專案規劃師：說明文字撰寫、應用場景規劃、主題規劃\n2.資料工程師：資料彙整、資料源串接、系統架構\n3.前端工程師：前端畫面開發、前後端API串接\n4.後端工程師：API 開發、後端與資料庫串接\n\n二、報名方式\n(一)、所有報名均應透過本競賽官網完成，連結：<a href='https://codefest.taipei/2025-fall/' target='_blank' style='text-decoration: underline; color: #58FEFF;' rel='noopener noreferrer'>https://codefest.taipei/</a>\n(二)、本競賽參賽隊伍以40隊或200人為原則；主辦單位將依據參賽者能力背景審核參賽資格，並採2階段審核：\n1.第1階段審核（書面審核）：參賽隊伍完成報名後，主辦單位將根據報名資料進行審核。審核錄取及備取結果將於第2階段前於官方網站公告，同時以Email通知隊伍。\n2.第2階段審核（面談審核）：將於工作坊同日舉行，以透過面談方式辦理。審核錄取及備取結果將於競賽活動前於官方網站公告，同時以Email通知隊伍。\n(三)、參賽隊伍應提交完整團隊資料，包括但不限於成員姓名、聯繫方式與簡歷等相關資料。如經主辦單位認定提交資料不完整，主辦單位得退回該隊伍的報名申請；參賽隊伍若仍欲報名，須依主辦單位指示補交完整團隊資料後始完成報名程序。\n(四)、倘不克參賽之團隊，最遲應於10月31日中午12:00前告知主辦單位，以利主辦單位安排候補參賽隊伍。若競賽當日參賽者無故缺席，將影響往後參與主辦單位類似競賽之報名資格。\n(五)、參賽隊伍中若有未年滿18歲者與其法定代理人共同參賽，請於填寫報名表勾選相應選項，並請於備註欄位註明法定代理人姓名（詳報名表單之說明）。\n(六)、主辦單位保留提前及延後結束報名之權利。\n(七)、主辦單位保留遞補候補參賽隊伍，及調整本競賽參賽隊伍數之權利。\n\n三、參賽隊伍須知\n(一)、各隊伍須指派1至2名成員代表出席實體工作坊，其餘隊伍成員得線上出席。參賽隊伍於競賽期間須全體成員實體出席。若參賽隊伍未指派代表參與工作坊，主辦單位將直接取消該參賽隊伍之競賽資格。若參賽隊伍全體成員於競賽期間無正當理由未親自到場報到參與競賽，主辦單位亦有權取消該參賽隊伍之競賽資格。\n(二)、參賽者若有重複參賽之情事，主辦單位得取消參賽、得獎資格並追回相關獎金(項)。\n(三)、參賽作品不得有抄襲、仿冒或其他侵害他人權益之情事。若經主辦單位發現或經他人檢舉有侵害他人權益之情事，並經訴訟程序確認屬實者，主辦單位得取消參賽、得獎資格並追回相關獎金(項)。\n(四)、主辦單位將於工作坊及競賽當天對參賽隊伍成員進行身分驗證，驗證方式包括但不限於以身分證、健保卡、駕照、護照或居留證等政府核發之證明文件。\n(五)、參賽隊伍應秉持良善立意，了解競賽規則，盡力完成競賽。\n(六)、參賽隊伍應配合主辦單位的問卷調查與訪問。\n(七)、參賽隊伍自備本競賽相關電腦設備，請自行保管維護，若因人為方式損害，主辦單位保留免責權利。\n(八)、參賽隊伍應公開釋出所有於本競賽開發之成果，詳情請參閱第捌條。"
                 },
                 {
                     "sub_title": "<肆、競賽時程>",
-                    "sub_content": "一、報名期間：114年10月1日(三)下午12:00 至 114年10月20日(一)下午12:00止。\n二、說明會：114年10月3日(五)下午13:30至14:30於線上辦理。\n三、工作坊：114年10月24日(五)上午09:30至15:30，於臺北市青年局國際會議廳6樓辦理。\n四、本競賽期間：114年11月8日(六) 至 114年11月9日(日)止（中間不間斷），於國立臺灣大學綜合體育館3樓辦理。"
+                    "sub_content": "一、報名期間：114年10月1日(五)下午12:00 至 114年10月20日(一)下午12:00止。\n二、說明會：114年10月3日(五)下午13:30至14:30於線上辦理。\n三、工作坊：114年10月24日(五)上午09:30至15:30，於臺北市青年局國際會議廳辦理。\n四、本競賽期間：114年11月8日(六) 至 114年11月9日(日)止（中間不間斷），於國立臺灣大學綜合體育館3樓辦理。"
                 },
                 {
                     "sub_title": "<伍、競賽內容>",
-                    "sub_content": "一、競賽主題\n(一)、本競賽將以市政服務開源為方向，以此提升並完善各城市數位服務，翻轉城市美學為目標。\n(二)、主辦單位將於工作坊說明主題的概略方向與內容，競賽當天於現場正式公告競賽主題及詳細內容。\n\n二、開發項目\n(一)、主要目標：以台北通為基礎，開發新城市通微服務功能或除錯。\n(二)、資料來源：程式運作時，所需之核心與關鍵資料應使用公開且合法之開放資料，並備註引用來源；其餘非必要資料得以模擬資料替代。\n(三)、應用軟體：開發過程中僅得使用開源軟體，不得使用商用軟體。但如 Google Map 等具獨占性之軟體或 API，得作為例外使用，並須加註說明。其餘違反本規定者，主辦單位得取消其參賽資格。\n(四)、AI工具應用：本競賽得以氛圍編程（Vibe Coding）等協作方式進行開發，惟相關AI工具均由參賽者自行準備，主辦單位不予提供。\n\n三、成果發表\n參賽隊伍需於第2天參加初選與決選進行成果發表，如選擇不進行成果發表則喪失被評選資格。成果發表注意事項如下：\n(一)、成果發表內容建議包括：\n1.說明擇定或被指派的題目\n2.說明作品的想法來源及應用場景\n3.說明開發項目、資料來源與相關技術應用細節\n4.成果實際運作展示\n\n(二)、參賽隊伍限投影開發成果畫面發表，不允許使用任何形式簡報（如PPT）。\n(三)、主辦單位會在工作坊公布詳細成果發表流程與規則。"
+                    "sub_content": "一、競賽主題\n(一)、本競賽將以市政服務開源為方向，以此提升並完善各城市數位服務，翻轉城市美學為目標。\n(二)、主辦單位將於工作坊說明主題的概略方向與內容，競賽當天於現場正式公告競賽主題及詳細內容。\n\n二、開發項目\n(一)、主要目標：以台北通為基礎，開發新城市通微服務新功能。\n(二)、資料來源：程式運作時，所需之核心與關鍵資料應使用公開且合法之開放資料，並備註引用來源；其餘非必要資料得以模擬資料替代。\n(三)、第三方應用：競賽作品中僅得使用開源軟體或套件，不得使用第三方軟體、商用套件或API等。違反本規定者，主辦單位得視情況扣分或取消參賽資格。\n\n三、成果發表\n參賽隊伍需於第2天參加初選與決選進行成果發表，如選擇不進行成果發表則喪失評選資格。成果發表注意事項如下：\n(一)、成果發表內容建議包括：\n1.說明擇定或被指派的題目\n2.說明作品的想法來源及應用場景\n3.說明開發項目、資料來源與相關技術應用細節\n4.成果實際運作展示\n(二)、參賽隊伍限投影開發成果畫面發表，不允許使用任何形式簡報（如PPT）。\n(三)、主辦單位會在工作坊公布詳細成果發表流程與規則。"
                 },
                 {
                     "sub_title": "<陸、評選辦法>",
-                    "sub_content": "一、評選程序\n評審委員在競賽第2天，分為「初選」與「決選」兩階段進行成果發表審查，參賽隊伍會在兩階段分別進行2分鐘與5分鐘的成果發表，並在決選階段進行問題回答。\n初選階段重在了解參賽隊伍的成果，成果符合條件、完整優良的參賽隊伍者將進入決選階段。決選階段會完整審查參賽隊伍的成果發表與進行問題回答。待所有入圍決選的參賽隊伍皆審查完畢，評審委員將召開評審會議決定得獎名單，並敘明得獎理由。\n\n二、評選標準\n(一)、本次競賽分為初選與決選，詳細評分項目說明：\n<div class='table-responsive' style='width:100%; overflow-x:auto;'><table style='width:100%; border-collapse:collapse; min-width:720px;'><caption style='text-align:left; font-weight:600; padding:8px 0;'>二、評選標準</caption><thead><tr><th style='text-align:left; border-bottom:1px solid #ddd; padding:8px; min-width:70px; white-space:nowrap;'>階段</th><th style='text-align:left; border-bottom:1px solid #ddd; padding:8px;'>項目</th><th style='text-align:left; border-bottom:1px solid #ddd; padding:8px;'>說明</th><th style='text-align:center; border-bottom:1px solid #ddd; padding:8px; white-space:nowrap;'>配分</th><th style='text-align:left; border-bottom:1px solid #ddd; padding:8px;'>評分依據</th></tr></thead><tbody><tr><td style='padding:8px; border-bottom:1px solid #eee; min-width:70px; white-space:nowrap;'>初選</td><td style='padding:8px; border-bottom:1px solid #eee;'>服務應用</td><td style='padding:8px; border-bottom:1px solid #eee;'>想法創意且與題目相符</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:center;'>8</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:left;'>具創意性（4分）、符合題目（4分）</td></tr><tr><td style='padding:8px; border-bottom:1px solid #eee; min-width:70px; white-space:nowrap;'></td><td style='padding:8px; border-bottom:1px solid #eee;'>視覺呈現</td><td style='padding:8px; border-bottom:1px solid #eee;'>服務功能畫面（至少呈現 1 個服務介面）</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:center;'>6</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:left;'>介面清楚（2分）、操作簡單（2分）、介面美觀（2分）</td></tr><tr><td style='padding:8px; border-bottom:1px solid #eee; min-width:70px; white-space:nowrap;'></td><td style='padding:8px; border-bottom:1px solid #eee;'>技術完整度</td><td style='padding:8px; border-bottom:1px solid #eee;'>架構清楚、資料來源正確</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:center;'>6</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:left;'>系統流程順暢（2分）、資料來源符合規定（2分）、功能可運行（2分）</td></tr><tr><td style='padding:8px; border-bottom:1px solid #eee; min-width:70px; white-space:nowrap;'>決選</td><td style='padding:8px; border-bottom:1px solid #eee;'>服務應用</td><td style='padding:8px; border-bottom:1px solid #eee;'>情境完整且實用</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:center;'>5</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:left;'>使用情境完整（3分）、可解決痛點（2分）</td></tr><tr><td style='padding:8px; border-bottom:1px solid #eee; min-width:70px; white-space:nowrap;'></td><td style='padding:8px; border-bottom:1px solid #eee;'>服務完整度</td><td style='padding:8px; border-bottom:1px solid #eee;'>服務落地可能性及難易度</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:center;'>5</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:left;'>資料可持續取得（2分）、功能完整（2分）、成本合理（1分）</td></tr><tr><td style='padding:8px; border-bottom:1px solid #eee; min-width:70px; white-space:nowrap;'></td><td style='padding:8px; border-bottom:1px solid #eee;'>技術穩定度</td><td style='padding:8px; border-bottom:1px solid #eee;'>操作流暢度與系統穩定性</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:center;'>4</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:left;'>執行流暢（2分）、無明顯錯誤（1分）、具擴充性（1分）</td></tr><tr><td style='padding:8px; border-bottom:1px solid #eee; min-width:70px; white-space:nowrap;'></td><td style='padding:8px; border-bottom:1px solid #eee;'>視覺呈現</td><td style='padding:8px; border-bottom:1px solid #eee;'>操作介面與功能完整度</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:center;'>3</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:left;'>介面清楚（1分）、操作簡單（1分）、介面美觀（1分）</td></tr><tr><td style='padding:8px; min-width:70px; white-space:nowrap;'>加分</td><td style='padding:8px;'>加分項（非必給）</td><td style='padding:8px;'>使用開源技術、符合公共利益、創意性高等優點，評審可酌情加分</td><td style='padding:8px; text-align:center;'>3</td><td style='padding:8px; text-align:left;'>—</td></tr></tbody></table></div>\n\n三、評分方式：\n(一)、初選：各項目依配分比例評分，滿分為20分，各隊伍經評審委員合計評分後，轉換為序位，並將序位合計後，依序決定決選隊伍名單。\n(二)、決選：各項目依配分比例評分，滿分為20分，各隊伍經評審委員合計評分後，轉換為序位，並將序位合計後，依序給定第一名、第二名及第三名各1隊、佳作3隊。\n(三)、評審委員會得保留獎項從缺或並列之權利。\n\n四、名次給定\n(一)、依評審委員審查結果，給定第一名、第二名及第三名各1隊、佳作3隊。\n(二)、評審委員會得保留獎項從缺或並列之權利。"
+                    "sub_content": "一、評選程序\n評審委員在競賽第2天，分為「初選」與「決選」兩階段進行成果發表審查，參賽隊伍會在兩階段分別進行約2分鐘與5分鐘的成果發表，並在決選階段進行問題回答。\n初選階段重在了解參賽隊伍的成果，成果符合條件、完整優良的參賽隊伍者將進入決選階段。決選階段會完整審查參賽隊伍的成果發表與進行問題回答。待所有入圍決選的參賽隊伍皆審查完畢，評審委員將召開評審會議決定得獎名單，並敘明得獎理由。\n\n二、評選標準：本次競賽分為初選與決選，詳細評分項目及配分說明如下：\n<div class='table-responsive' style='width:100%; overflow-x:auto;'><table style='width:100%; border-collapse:collapse; min-width:720px;'><caption style='text-align:left; font-weight:600; padding:8px 0;'>二、評選標準</caption><thead><tr><th style='text-align:left; border-bottom:1px solid #ddd; padding:8px; min-width:70px; white-space:nowrap;'>階段</th><th style='text-align:left; border-bottom:1px solid #ddd; padding:8px;'>項目</th><th style='text-align:left; border-bottom:1px solid #ddd; padding:8px;'>說明</th><th style='text-align:center; border-bottom:1px solid #ddd; padding:8px; white-space:nowrap;'>配分</th><th style='text-align:left; border-bottom:1px solid #ddd; padding:8px;'>評分依據</th></tr></thead><tbody><tr><td style='padding:8px; border-bottom:1px solid #eee; min-width:70px; white-space:nowrap;'>初選</td><td style='padding:8px; border-bottom:1px solid #eee;'>服務應用</td><td style='padding:8px; border-bottom:1px solid #eee;'>想法創意且與題目相符</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:center;'>40</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:left;'>具創意性（20分）、符合題目（20分）</td></tr><tr><td style='padding:8px; border-bottom:1px solid #eee;'></td><td style='padding:8px; border-bottom:1px solid #eee;'>視覺呈現</td><td style='padding:8px; border-bottom:1px solid #eee;'>服務功能畫面（至少呈現 1 個服務介面）</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:center;'>30</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:left;'>介面清楚（10分）、操作簡單（10分）、介面美觀（10分）</td></tr><tr><td style='padding:8px; border-bottom:1px solid #eee;'></td><td style='padding:8px; border-bottom:1px solid #eee;'>技術完整度</td><td style='padding:8px; border-bottom:1px solid #eee;'>架構清楚、資料來源正確</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:center;'>30</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:left;'>系統流程順暢（10分）、資料來源符合規定（10分）、功能可運行（10分）</td></tr><tr><td style='padding:8px; border-bottom:1px solid #eee;'>決選</td><td style='padding:8px; border-bottom:1px solid #eee;'>服務應用</td><td style='padding:8px; border-bottom:1px solid #eee;'>情境完整且實用</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:center;'>25</td><td style='padding:8px; border-bottom:1px solid #eee;'>使用情境完整（15分）、可解決痛點（10分）</td></tr><tr><td style='padding:8px; border-bottom:1px solid #eee;'></td><td style='padding:8px; border-bottom:1px solid #eee;'>服務完整度</td><td style='padding:8px; border-bottom:1px solid #eee;'>服務落地可能性及難易度</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:center;'>25</td><td style='padding:8px; border-bottom:1px solid #eee;'>資料可持續取得（10分）、功能完整（10分）、成本合理（5分）</td></tr><tr><td style='padding:8px; border-bottom:1px solid #eee;'></td><td style='padding:8px; border-bottom:1px solid #eee;'>技術穩定度</td><td style='padding:8px; border-bottom:1px solid #eee;'>操作流暢度與系統穩定性</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:center;'>20</td><td style='padding:8px; border-bottom:1px solid #eee;'>執行流暢（10分）、無明顯錯誤（5分）、具擴充性（5分）</td></tr><tr><td style='padding:8px; border-bottom:1px solid #eee;'></td><td style='padding:8px; border-bottom:1px solid #eee;'>視覺呈現</td><td style='padding:8px; border-bottom:1px solid #eee;'>操作介面與功能完整度</td><td style='padding:8px; border-bottom:1px solid #eee; text-align:center;'>20</td><td style='padding:8px; border-bottom:1px solid #eee;'>介面美觀（10分）、介面清楚（5分）、操作簡單（5分）</td></tr><tr><td style='padding:8px;'>加分</td><td style='padding:8px;'>加分項（非必給）</td><td style='padding:8px;'>使用開源技術、符合公共利益、創意性高等優點，評審可酌情加分</td><td style='padding:8px; text-align:center;'>10</td><td style='padding:8px;'>—</td></tr></tbody></table></div>\n\n三、評分方式：\n(一)、初選：各項目依配分比例評分，滿分為100分，各隊伍經評審委員合計評分後，轉換為序位，並將序位合計後，依序決定決選隊伍名單。\n(二)、決選：各項目依配分比例評分，滿分為100分，各隊伍經評審委員合計評分後，轉換為序位，並將序位合計後，依序給定第一名、第二名及第三名各1隊、佳作3隊。序位合計結果，如遇相同情形，則由評審委員共識後決定名次。\n(三)、評審委員會得保留獎項從缺或並列之權利。\n\n四、名次給定：\n(一)、依評審委員審查結果，給定第一名、第二名及第三名各1隊、佳作3隊。\n(二)、評審委員會得保留獎項從缺或並列之權利。"
                 },
                 {
                     "sub_title": "<柒、得獎隊伍權利義務>",
-                    "sub_content": "一、獎金、獎狀：得獎隊伍將核發獎金、獎狀\n(一)、獎金金額：所有獎金均以隊伍為單位核發。\n1. 第一名：新台幣300,000元整。\n2. 第二名：新台幣150,000元整。\n3. 第三名：新台幣100,000元整。\n4. 佳作：新台幣50,000元整。\n(二)、獎項核發：主辦單位會於頒獎典禮頒發獎狀。\n(三)、得獎隊伍需要在賽後與主辦單位協作，在競賽結束後，主辦單位電子郵件通知日之翌日起算2個月內，將其得獎作品指定元素整併到官方程式庫中，主辦單位將於整併工作完成後執行獎金核發作業。如得獎作品經主辦單位認定整併者有困難或不適合整併者，則不受此限。詳細協作項目與規範請參閱本條第二款。\n(四)、獎金分配與核發：獎金分配方式由得獎隊伍於主辦單位指定期間內自行決定後，以書面提供分配方式及匯款帳號予主辦單位。得獎隊伍與主辦單位協作完成後，主辦單位將依參賽隊伍提交分配方式及匯款帳號於30日內將獎金匯入本國銀行之指定帳戶。若未於指定期限內將分配方式及匯款帳號提供予主辦單位者，主辦單位將平均分配、暫保留或依法處理該筆獎金。\n(五)、得獎隊伍之參賽者獎金應各自依所得稅法等相關規定辦理扣繳。\n(六)、得獎隊伍應配合主辦單位要求於往後舉辦的黑客松競賽前，分享相關經驗。\n\n二、得獎隊伍與主辦單位協作\n(一)、主辦單位將於競賽結束後2週內，以電子郵件通知得獎隊伍希望參與協作的項目，並將得獎隊伍聯絡資訊提供予主辦單位相關開發人員。\n(二)、整併範圍限得獎隊伍於競賽期間完成的作品，主辦單位僅會要求得獎隊伍簡易修改或刪減，並不會要求得獎隊伍進行額外新功能的開發。若得獎隊伍對於整併項目有窒礙難行之處，均可與主辦單位提出調整。\n(三)、得獎隊伍對於開發事項如有疑問或需主辦單位協助事項，應盡速與主辦單位聯絡。主辦單位得邀請得獎隊伍就協作一同討論，相關細節將於競賽結束後2週內以電子郵件形式告知。"
+                    "sub_content": "一、獎金、獎狀：得獎隊伍將核發獎金、獎狀\n(一)、獎金金額：所有獎金均以隊伍為單位核發。\n1.第一名：新台幣300,000元整。\n2.第二名：新台幣150,000元整。\n3.第三名：新台幣100,000元整。\n4.佳作：新台幣50,000元整。\n(二)、獎項核發：主辦單位會於頒獎典禮頒發獎狀。\n(三)、得獎隊伍需要在賽後與主辦單位協作，在競賽結束後，主辦單位電子郵件通知日之翌日起算1個月內，將其得獎作品指定元素整併到官方程式庫中，主辦單位將於整併工作完成後執行獎金核發作業。如得獎作品經主辦單位認定整併者有困難或不適合整併者，則不受此限。詳細協作項目與規範請參閱本條第二款。\n(四)、獎金分配與核發：獎金分配方式由得獎隊伍於主辦單位指定期間內自行決定後，以書面提供分配方式及匯款帳號予主辦單位。得獎隊伍與主辦單位協作完成後，主辦單位將依參賽隊伍提交分配方式及匯款帳號於30日內將獎金匯入本國銀行之指定帳戶。若未於指定期限內將分配方式及匯款帳號提供予主辦單位者，主辦單位將平均分配、暫保留或依法處理該筆獎金。\n(五)、得獎隊伍之參賽者獎金應各自依所得稅法等相關規定辦理扣繳。\n(六)、得獎隊伍應配合主辦單位要求於往後舉辦的黑客松競賽前，分享相關經驗。\n\n二、得獎隊伍與主辦單位協作\n(一)、主辦單位將於競賽結束後2週內，以電子郵件通知得獎隊伍希望參與協作的項目，並將得獎隊伍聯絡資訊提供予主辦單位相關開發人員。\n(二)、整併範圍限得獎隊伍於競賽期間完成的作品，主辦單位僅會要求得獎隊伍簡易修改或刪減，並不會要求得獎隊伍進行額外新功能的開發。若得獎隊伍對於整併項目有窒礙難行之處，均可與主辦單位提出調整。\n(三)、得獎隊伍對於開發事項如有疑問或需主辦單位協助事項，應盡速與主辦單位聯絡。主辦單位得邀請得獎隊伍就協作一同討論，相關細節將於競賽結束後2週內以電子郵件形式告知。"
                 },
                 {
                     "sub_title": "<捌、智慧財產聲明>",
@@ -135,8 +135,8 @@
                     "sub_content": "一、如本活動須知有未盡事宜，得由主辦單位修正後公布於官方網站。\n二、主辦單位、承辦單位及協辦單位保留隨時修正、異動、暫停、取消以及本活動最終解釋之權利。"
                 },
                 {
-                    "sub_title": "<附件、「賽前練功房」空間使用規範>",
-                    "sub_content": "為確保所有競賽參賽者能夠在最佳環境下備賽，請務必詳閱以下空間使用說明，並請配合遵守場地使用規範：\n\n一、空間資訊與開放時間\n地點：台北市電腦商業同業公會B1F及5F指定空間\n（台北市松山區八德路三段2號）\n使用期間：10月27日(一)10:00 至 11月5日(三)\n開放時間：每天三個時段 上午10:00-12:00、下午13:00-15:00、下午15:00-17:00\n預約方式：填寫預約表單，相同時段若借用隊伍數量超出場地容納空間則依填表順序依序安排\n聯絡方式：\n電話：02-2577-4249 #327張先生、#522 葉小姐\nE-mail：<a href='mailto:codefesttaipei@gov.taipei' target='_blank' rel='noopener noreferrer' style='text-decoration: underline; color: #58FEFF;'>codefesttaipei@gov.taipei</a>\n\n二、進出管理\n請於預約時間當天來電本會服務同仁協助接待。\n\n三、空間使用須知\n設備與資源：提供桌椅、電源、咖啡，請妥善使用。\n維持整潔：請勿隨意移動設備，並於使用後收拾個人物品及垃圾。\n節約能源：若長時間不使用電源設備，請關閉電源。\n安排順序：若達每日使用人數上限，將依現場預約順序提供座位。\n\n四、行為規範\n保持安靜：請尊重他人，避免喧嘩或大聲交談。\n禁止佔位：如需暫時離開超過30分鐘，請帶走個人物品。\n禁止外來訪客：僅限報名選手使用，非報名人員不得進入。\n\n五、違規處理\n若有違反規範行為，將視情節輕重，給予警告或取消空間使用權限。"
+                    "sub_title": "<壹拾、管轄法院>",
+                    "sub_content": "本活動有關爭議，均依中華民國法律處理，並以臺灣臺北地方法院為第一審管轄法院。"
                 }
             ],
             "download_url": "https://drive.google.com/file/d/1NOO7O13H6als_WwrqXiDKXgKX-wN--cD/view"
@@ -151,7 +151,7 @@
             {
                 "id": "online",
                 "schedule_name": "線上說明會 10.03",
-                "schedule_sub_name": "2025年10月03日（星期五）13:30–14:30",
+                "schedule_sub_name": "2025年10月03日（星期五）13:30–14:30\n<a href='https://reurl.cc/oYE1a3' target='_blank' style='text-decoration: underline; color: #58FEFF;'>說明會網址連結</a>",
                 "button": {
                     "text": "",
                     "link": "",
@@ -360,7 +360,7 @@
                 "id": 1,
                 "date": "2025.03.31",
                 "title": "📢 最新消息｜2025 雙北程式設計節-城市儀表板大黑客松正式開跑！",
-                "image_url": "",
+                "image_url": "", 
                 "content": "讓數據發聲，開源創新！「2025 雙北程式設計節-城市儀表板大黑客松」 即將登場，首獎 30 萬，總獎金 70 萬，等你來挑戰！\n\n本競賽由臺北市政府資訊局與新北市政府資訊中心共同主辦，將於 3 月 31 日正式開放報名！ 今年競賽以開源技術與數據可視化為核心，鼓勵參賽者透過「臺北城市儀表板」 進行智慧應用開發，推動城市治理創新，提升公共數據價值。\n\n本次黑客松競賽建議參賽者組成完整隊伍，以最大化競爭優勢。理想的團隊配置應涵蓋前端開發、後端開發、數據處理與視覺設計，確保技術實作的完整性。根據競賽評分標準與專案完整性的考量，擁有多元技能組合的團隊更能發揮綜合優勢，打造兼具創新性、穩定性與高效能的數據視覺化解決方案，在競賽中脫穎而出！\n\n💡 競賽亮點\n✅ 首獎 30 萬，總獎金 70 萬，挑戰極限！\n✅ 接觸業界專家，獲得技術與設計指導！\n✅ 32 小時開源挑戰，為你所愛的開源項目貢獻！\n✅ 「雙北駭客屋」開放，提供最佳開發空間，激發無限創意！\n\n🚀 競賽資訊\n📅 報名時間： 2025 年 3 月 31 日 - 4 月 30 日\n⏰ 競賽時間： 2025 年 5 月 31 日 - 6 月 1 日\n👥 參賽資格： 3 至 5 人團隊（不限學生、開發者、企業團隊）\n🔍 競賽流程： 隊伍報名 → 工作坊面談 → 入選至黑客松競賽\n💰 總獎金： 第一名 30 萬元，總獎金 70 萬元\n\n無論你是熱愛技術的開發者還是擅長設計的創新者，這將是發揮實力、挑戰極限的最佳舞台！立即組隊，開啟雙北城市新篇章！\n\n📢 報名詳情即將公布，敬請關注！ 🚀",
                 "available": true,
                 "tag": "news"
@@ -666,6 +666,26 @@
             {
                 "id": 2,
                 "image_url": "images/sponsors/梅竹黑客松_logo.svg"
+            },
+            {
+                "id": 3,
+                "image_url": "images/sponsors/青年局LOGO-白.svg"
+            },
+            {
+                "id": 4,
+                "image_url": "images/sponsors/輔大資管LOGO-白.png"
+            },
+            {
+                "id": 5,
+                "image_url": "images/sponsors/中央資工.png"
+            },
+            {
+                "id": 6,
+                "image_url": "images/sponsors/中原大學-資訊管理學系LOGO.svg"
+            },
+            {
+                "id": 7,
+                "image_url": "images/sponsors/元智資工LOGO-白.png"
             }
         ]
     },
@@ -767,6 +787,10 @@
                     {
                         "title": "請問本次競賽是否提供開發主機以及資料庫環境？",
                         "content": "主辦單位沒有提供主機及資料庫環境，請參賽隊伍自備本競賽相關電腦設備。"
+                    },
+                    {
+                        "title": "本次競賽是否可使用AI工具？",
+                        "content": "本競賽得以氛圍創作（Vibe Coding）等方式進行程式開發，惟相關AI工具均由參賽者自行準備，主辦單位不予提供。"
                     }
                 ]
             }

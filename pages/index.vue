@@ -258,11 +258,6 @@ const newsKeyword = ref('');
             >
               {{ tm('hero_banner.title') }}
             </p>
-            <!-- <p class="text-7xl">
-              城市儀表板
-              <br />
-              大黑客松
-            </p> -->
             <p
               v-for="item in bannerContentList"
               :key="item.label"
@@ -306,7 +301,7 @@ const newsKeyword = ref('');
               <p class="whitespace-pre-wrap">{{ tm('rules.description') }}</p>
             </div>
             <div class="grid lg:grid-cols-5 grid-cols-1 border border-b-white">
-              <div class="lg:col-span-3 lg:p-16 p-4 lg:border lg:border-r-white">
+              <div class="lg:col-span-3 lg:p-16 lg:pb-24 p-4 lg:border lg:border-r-white">
                 <div class="relative">
                   <!-- desktop 背景圖 -->
                   <img
@@ -316,10 +311,10 @@ const newsKeyword = ref('');
                   />
                   <!-- desktop image -->
                   <img
-                    src="@/assets/images/img-rules.jpg"
+                    src="@/assets/images/img-rules.svg"
                     class="absolute top-[12%] left-[12%] right-0 lg:block hidden"
                     :style="{ width: 'calc(100% - 12%)' }"
-                    alt="程式儀表板大黑客松宣傳圖"
+                    alt="程式通微服務大黑客松宣傳圖"
                   />
                   <!-- mobile 背景圖 -->
                   <img
@@ -329,10 +324,10 @@ const newsKeyword = ref('');
                   />
                   <!-- mobile image -->
                   <img
-                    src="@/assets/images/img-rules-mobile.jpg"
+                    src="@/assets/images/img-rules-mobile.svg"
                     class="absolute top-[10%] left-[16%] lg:hidden block"
                     :style="{ width: 'calc(100% - 16%)' }"
-                    alt="程式儀表板大黑客松宣傳圖"
+                    alt="程式通微服務大黑客松宣傳圖"
                   />
                   <!-- desktop noise1 -->
                   <img
@@ -610,7 +605,8 @@ const newsKeyword = ref('');
                     class="flex justify-between items-center p-4 border border-b-white min-h-[83px]"
                   >
                     <p class="text-xl whitespace-pre-wrap">
-                      {{ activeSchedule.schedule_sub_name }}
+                      <!-- {{ activeSchedule.schedule_sub_name }} -->
+                      <AtomSaveHtml :html="activeSchedule.schedule_sub_name" />
                     </p>
 
                     <!-- 按鈕（根據類型顯示）-->
@@ -704,7 +700,8 @@ const newsKeyword = ref('');
                   <div class="flex-1 text-white">
                     <div class="flex flex-col text-center p-4 border border-b-white">
                       <p class="text-xl mb-2 whitespace-pre-wrap">
-                        {{ tab.schedule_sub_name }}
+                        <!-- {{ tab.schedule_sub_name }} -->
+                        <AtomSaveHtml :html="tab.schedule_sub_name" />
                       </p>
                       <!-- 按鈕（根據類型顯示）-->
                       <template v-if="tab.button?.text">
@@ -1077,7 +1074,7 @@ const newsKeyword = ref('');
                           <img
                             :src="runtimeConfig.app.baseURL + sponsor.image_url"
                             alt="sponsor"
-                            class="w-auto h-[80px] object-contain"
+                            class="w-auto max-h-[80px] object-contain"
                           />
                         </div>
                       </div>
@@ -1100,7 +1097,7 @@ const newsKeyword = ref('');
                           <img
                             :src="runtimeConfig.app.baseURL + sponsor.image_url"
                             alt="sponsor"
-                            class="w-auto h-[60px] object-contain"
+                            class="w-auto max-h-[60px] object-contain"
                           />
                         </div>
                       </div>
@@ -1120,7 +1117,7 @@ const newsKeyword = ref('');
                           <img
                             :src="runtimeConfig.app.baseURL + sponsor.image_url"
                             alt="sponsor"
-                            class="w-auto h-[60px] object-contain"
+                            class="w-auto max-h-[60px] object-contain"
                           />
                         </div>
                       </div>
