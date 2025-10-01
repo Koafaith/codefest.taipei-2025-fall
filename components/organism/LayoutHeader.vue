@@ -45,7 +45,6 @@ const { activeDialog } = storeToRefs(dialogStore);
                   class="inline-flex p-8 space-x-2"
                   @click="dialogStore.closeDialog()"
                 >
-                  <img src="/images/logos/logo-icon-ntpc.svg" width="40" alt="" />
                   <img src="/images/logos/logo-icon-tpe.svg" width="40" alt="" />
                 </NuxtLink>
                 <OrganismLayoutNavbar
