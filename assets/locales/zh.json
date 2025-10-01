@@ -669,7 +669,7 @@
             },
             {
                 "id": 3,
-                "image_url": "images/sponsors/青年局LOGO-白.svg"
+                "image_url": "images/sponsors/青年局LOGO-白.png"
             },
             {
                 "id": 4,
@@ -686,6 +686,10 @@
             {
                 "id": 7,
                 "image_url": "images/sponsors/元智資工LOGO-白.png"
+            },
+            {
+                "id": 8,
+                "image_url": "images/sponsors/NTUEESA_logo.svg"
             }
         ]
     },
