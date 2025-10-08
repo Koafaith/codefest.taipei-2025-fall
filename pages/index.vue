@@ -231,7 +231,9 @@ const newsKeyword = ref('');
             src="@/assets/images/hero-banner-noise3.svg"
             alt="noise"
           />
-          <div class="p-10 flex flex-col justify-around h-full max-h-[500px] relative">
+          <div
+            class="lg:p-10 p-10 pb-24 flex flex-col justify-around h-full max-h-[500px] relative"
+          >
             <!-- desktop noise -->
             <img
               class="lg:block hidden hero-banner-noise hero-banner-noise--2"
@@ -1063,7 +1065,7 @@ const newsKeyword = ref('');
                 <!-- Desktop 輪播 -->
                 <div class="hidden lg:block">
                   <div class="marquee-container">
-                    <div class="marquee-content marquee-left flex">
+                    <div class="marquee-content marquee-left flex items-center">
                       <!-- 重複多次內容以實現無縫循環 -->
                       <div
                         v-for="(sponsor, index) in duplicatedSponsorList"
@@ -1175,7 +1177,7 @@ const newsKeyword = ref('');
   }
 
   &::after {
-    content: url('@/assets/images/hero-banner-ntpc.svg');
+    content: url('@/assets/images/hero-banner-tpe2.svg');
     background-repeat: no-repeat;
     position: absolute;
     right: 0;
@@ -1189,7 +1191,7 @@ const newsKeyword = ref('');
   }
 
   .bg-tp {
-    background-image: url('@/assets/images/hero-banner-tp.svg');
+    background-image: url('@/assets/images/mobile-hero-banner.svg');
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: contain;

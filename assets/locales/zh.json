@@ -690,6 +690,26 @@
             {
                 "id": 8,
                 "image_url": "images/sponsors/NTUEESA_logo.svg"
+            },
+            {
+                "id": 9,
+                "image_url": "images/sponsors/國立臺灣科技大學-白-01.png"
+            },
+            {
+                "id": 10,
+                "image_url": "images/sponsors/中央資管-白-01.png"
+            },
+            {
+                "id": 11,
+                "image_url": "images/sponsors/台大資管學生會-白-01.png"
+            },
+            {
+                "id": 12,
+                "image_url": "images/sponsors/國立清華大學科技藝術研究所-白-01.png"
+            },
+            {
+                "id": 13,
+                "image_url": "images/sponsors/國立臺北科技大學資訊與財金管理系-白-01.png"
             }
         ]
     },
@@ -805,8 +825,8 @@
         "address_tpe": "110204 臺北市信義區市府路1號",
         "line_id": "",
         "office_hours": "週一至週五 09:00-17:00",
-        "email": "",
-        "phone": "",
+        "email": "codefesttaipei@gov.taipei",
+        "phone": "02-2577-4249#522",
         "buttons": [
             {
                 "name": "Github",
