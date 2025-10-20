@@ -4,8 +4,8 @@
         "title": "城市通微服務\n大黑客松",
         "content": [
             {
-                "label": "報名期間",
-                "value": "10/01 Wed - 10/20 Mon"
+                "label": "競賽期間",
+                "value": "11/08 Sat - 11/09 Sun"
             }
         ]
     },
@@ -151,7 +151,7 @@
             {
                 "id": "online",
                 "schedule_name": "線上說明會 10.03",
-                "schedule_sub_name": "2025年10月03日（星期五）13:30–14:30\n<a href='https://www.youtube.com/watch?v=btnbg0e95_E' target='_blank' style='text-decoration: underline; color: #58FEFF;'>說明會網址連結</a>",
+                "schedule_sub_name": "2025年10月03日（星期五）13:30–14:30\n<a href='https://youtu.be/btnbg0e95_E?si=mdQrhyT8dcISlFyy' target='_blank' style='text-decoration: underline; color: #58FEFF;'>說明會網址連結</a>",
                 "button": {
                     "text": "",
                     "link": "",
