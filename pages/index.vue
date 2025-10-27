@@ -39,7 +39,7 @@ const scheduleList = computed(() => {
   return Array.isArray(data) ? data : Object.values(data); // 轉換 Object 為 Array
 });
 /** 選中的重要時程 */
-const activeSchedule = ref(scheduleList.value[1]);
+const activeSchedule = ref(scheduleList.value[2]);
 
 /** 最新消息列表 */
 const newsList = computed<News[]>(() => {

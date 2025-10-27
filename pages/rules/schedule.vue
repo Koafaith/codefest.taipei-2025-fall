@@ -18,7 +18,7 @@ const scheduleList = computed(() => {
       v-for="(tab, index) in scheduleList"
       :key="index"
       v-slot="{ open }"
-      :default-open="index === 1"
+      :default-open="index === 2"
     >
       <DisclosureButton
         v-kb-focus="{
