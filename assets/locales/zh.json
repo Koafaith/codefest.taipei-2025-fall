@@ -364,6 +364,15 @@
                 "content": "<img src='images/news/news-1.jpg' alt='名單1'><br><br><img src='images/news/news-2.jpg' alt='名單2'>",
                 "available": true,
                 "tag": "news"
+            },
+            {
+                "id": 2,
+                "date": "2025.11.14",
+                "title": "📢 【2025 臺北秋季程式設計節 – 城市通微服務大黑客松】晉級決賽&得獎團隊名單公布！",
+                "image_url": "",
+                "content": "<img src='images/news/news-3.png' alt='決選名單'><br><br><img src='images/news/news-4.png' alt='得獎名單'><br /><p>恭喜以上團隊，相關影片尚在剪輯中，敬請期待！</p><br /><p>🔗讓我們先來回味一下閉幕時的開場影片吧👇<br/><a href='https://youtu.be/Y_zg9bPXxt4?si=FEHuhrz9ZOJRobEz' target='_blank' rel='noopener noreferrer' style='text-decoration: underline; color: #0d6efd;'>https://youtu.be/Y_zg9bPXxt4?si=FEHuhrz9ZOJRobEz</a></p><br /><p>🔗新聞稿👇<br/><a href='https://doit.gov.taipei/News_Content.aspx?n=4B2B1AB4B23E7EA8&amp;sms=72544237BBE4C5F6&amp;s=40A5E2DC7544315E' target='_blank' rel='noopener noreferrer' style='text-decoration: underline; color: #0d6efd;'>https://doit.gov.taipei/News_Content.aspx?n=4B2B1AB4B23E7EA8&amp;sms=72544237BBE4C5F6&amp;s=40A5E2DC7544315E</a></p><br /><p>🔗照片連結（開放一個月）👇<br/>1108精選<br/><a href='https://reurl.cc/YkWpyx' target='_blank' rel='noopener noreferrer' style='text-decoration: underline; color: #0d6efd;'>https://reurl.cc/YkWpyx</a><br/>1109精選<br/><a href='https://reurl.cc/GGdO7A' target='_blank' rel='noopener noreferrer' style='text-decoration: underline; color: #0d6efd;'>https://reurl.cc/GGdO7A</a></p>",
+                "available": true,
+                "tag": "news"
             }
         ]
     },
