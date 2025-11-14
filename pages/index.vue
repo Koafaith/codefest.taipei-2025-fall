@@ -18,6 +18,17 @@ const { activeDialog } = storeToRefs(dialogStore);
 const { tm } = useI18n();
 const runtimeConfig = useRuntimeConfig();
 
+/**
+ * 將 "2025.11.14" 格式的日期轉換為可解析的格式
+ * @param dateStr - 日期字串，格式為 "YYYY.MM.DD"
+ * @returns 轉換後的 Date 物件
+ */
+const parseDate = (dateStr: string): Date => {
+  // 將 "2025.11.14" 轉換為 "2025-11-14" 格式，以便正確解析
+  const normalizedDate = dateStr.replace(/\./g, '-');
+  return new Date(normalizedDate);
+};
+
 const headerHeight = ref(0);
 const bannerHeight = ref('100vh');
 
@@ -75,14 +86,14 @@ const availableNews = computed(() => {
         break;
     }
     filtered = filtered.filter(
-      (item: News) => new Date(item.date).getTime() >= filterDate.getTime()
+      (item: News) => parseDate(item.date).getTime() >= filterDate.getTime()
     );
   }
 
   // 排序
   filtered.sort((a: News, b: News) => {
-    const dateA = new Date(a.date).getTime();
-    const dateB = new Date(b.date).getTime();
+    const dateA = parseDate(a.date).getTime();
+    const dateB = parseDate(b.date).getTime();
     return newsSort.value === 'newest' ? dateB - dateA : dateA - dateB;
   });
 
@@ -801,15 +812,15 @@ const newsKeyword = ref('');
                         <option value="year">一年內</option>
                       </select>
                     </div>
-                    <!-- 關鍵字搜尋 -->
-                    <div class="flex items-center flex-1">
-                      <input
-                        v-model="newsKeyword"
-                        type="text"
-                        placeholder="搜尋關鍵字..."
-                        class="bg-primary-300 border border-white px-2 py-1 flex-1"
-                      />
-                    </div>
+                  </div>
+                  <!-- 關鍵字搜尋 -->
+                  <div class="w-full lg:pr-4 mb-6">
+                    <input
+                      v-model="newsKeyword"
+                      type="text"
+                      placeholder="搜尋關鍵字..."
+                      class="bg-primary-300 border border-white px-2 py-1 w-full"
+                    />
                   </div>
 
                   <div class="space-y-6 text-white max-h-[347px] lg:pr-4 overflow-auto">
@@ -822,7 +833,7 @@ const newsKeyword = ref('');
                         y: 21 + index,
                       }"
                       href="#"
-                      class="block border border-white p-4 transition hover:bg-primary-50 hover:text-primary-500 m-1"
+                      class="block border border-white p-4 transition hover:bg-primary-50 hover:text-primary-500"
                       @click.prevent="
                         activeNews = news;
                         dialogStore.openDialog('news');
