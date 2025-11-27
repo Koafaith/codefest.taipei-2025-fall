@@ -89,9 +89,9 @@ const scheduleList = computed(() => {
               </thead>
               <tbody>
                 <tr v-for="(item, subIndex) in tab.schedule" :key="subIndex">
-                  <td class="p-2 whitespace-pre-wrap">{{ item.col1 }}</td>
-                  <td class="p-2 whitespace-pre-wrap">{{ item.col2 }}</td>
-                  <td class="p-2 whitespace-pre-wrap">{{ item.col3 }}</td>
+                  <td v-if="item.col1" class="p-2 whitespace-pre-wrap">{{ item.col1 }}</td>
+                  <td v-if="item.col2" class="p-2 whitespace-pre-wrap">{{ item.col2 }}</td>
+                  <td v-if="item.col3" class="p-2 whitespace-pre-wrap">{{ item.col3 }}</td>
                 </tr>
               </tbody>
             </table>
